@@ -17,10 +17,11 @@ body{
 	font-size: 16px;
 	line-height: 1;
 }
+* p{
+	text-indent: 30px;
+}
 .headerblock {
 	font-family: "Noto Sans", sans-serif;
-}
-.headerblock__container {
 }
 .headerblock__title {
 	text-align: center;
@@ -28,41 +29,59 @@ body{
 .headerblock__image {
 	text-align: center;
 }
-.headerblock__img {
-}
 .headerblock__about {
+	text-align: center;
 }
 .headerblock__text {
+	letter-spacing: 25px;
 }
 .headerblock__list {
+	font-weight: normal;
 }
 .list {
 	font-family: "Adobe Caslon Pro";
 	font-weight: bold;
 }
 .list__item {
+	font-size: 25px;
+	text-align: center;
 }
 .list__link {
+	color: brown;
 }
 .mainblock {
 	font-family: 'Martian Mono', monospace;
+	font-size: 20px;
+	line-height: 1.6;
 }
 .mainblock__container {
+	font-style: italic;
 }
 .mainblock__period {
+	text-transform: capitalize;
 }
 .mainblock__subtitle {
 	text-align: center;
 }
 .mainblock__text {
+	font-weight: 600;
 }
 .mainblock__list {
+	text-decoration: underline;
 }
 .mainblock__history {
+	word-spacing: 20px;
 }
 .mainblock__administrative {
+	letter-spacing: 15px;
 }
 .mainblock__senat {
+	text-shadow: 0px 5px 5px yellow;
 }
 .mainblock__language {
+	white-space: nowrap;
+	font-size: 24px;
+}
+.mainblock__language p {
+	color: red;
 }
