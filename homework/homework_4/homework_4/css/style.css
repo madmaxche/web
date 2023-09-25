@@ -1,0 +1,68 @@
+/* ----------------- */
+/* --RESET STYLES--- */
+/* ----------------- */
+/* @import url("reset.css"); */
+@import url("https://fonts.googleapis.com/css?family=Noto+Sans&display=swap");
+
+
+@font-face {
+	font-family: 'Adobe Caslon Pro';
+	src: url('../fonts/ACaslonPro-Bold.woff2') format('woff2'),url('../fonts/ACaslonPro-Bold.woff') format('woff');
+	font-weight: bold;
+	font-style: normal;
+	font-display: swap;
+}
+
+body{
+	font-size: 16px;
+	line-height: 1;
+}
+.headerblock {
+	font-family: "Noto Sans", sans-serif;
+}
+.headerblock__container {
+}
+.headerblock__title {
+	text-align: center;
+}
+.headerblock__image {
+	text-align: center;
+}
+.headerblock__img {
+}
+.headerblock__about {
+}
+.headerblock__text {
+}
+.headerblock__list {
+}
+.list {
+	font-family: "Adobe Caslon Pro";
+	font-weight: bold;
+}
+.list__item {
+}
+.list__link {
+}
+.mainblock {
+	font-family: 'Martian Mono', monospace;
+}
+.mainblock__container {
+}
+.mainblock__period {
+}
+.mainblock__subtitle {
+	text-align: center;
+}
+.mainblock__text {
+}
+.mainblock__list {
+}
+.mainblock__history {
+}
+.mainblock__administrative {
+}
+.mainblock__senat {
+}
+.mainblock__language {
+}
