@@ -4,6 +4,8 @@
 
 .block {
 	background-color: #77608d;
+	padding: 25px;
+	margin: 100px;
 }
 .inline {
 	background-color: #7a956b;
