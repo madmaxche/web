@@ -1,7 +1,11 @@
 /* ======================================================== */
 /* --------------- CSS-властивості блоків ----------------- */
 /* ======================================================== */
+@import url("https://fonts.googleapis.com/css?family=Dela+Gothic+One:regular&display=swap");
 
+body {
+	font-family: "Dela Gothic One", sans-serif;
+}
 .block {
 	background-color: #77608d;
 	padding: 25px;
