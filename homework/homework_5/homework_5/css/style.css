@@ -5,17 +5,22 @@
 
 @import url("https://fonts.googleapis.com/css?family=Poppins:300,700&display=swap");
 
-body{
-	font-family: 'Poppins', sans-serif;
-	padding: 0px 15px;
+body {
+	font-family: "Poppins", sans-serif;
 }
 img{
 	max-width: 100%;
 	border-radius: 5px;
 }
 .wrapper {
-	max-width: 1255px;
-	margin: 0 auto;
+	max-width: 1300px;
+	margin: 0px auto;
+	padding: 100px 15px;
+}
+[class*="__container"] {
+	max-width: 816px;
+	margin: 0px auto;
+	margin-bottom: 80px;
 }
 [class*="__title"] {
 	max-width: 605px;
@@ -25,10 +30,6 @@ img{
 	line-height: 1.6;
 	margin-bottom: 40px;
 }
-[class*="__block"] {
-	max-width: 816px;
-	margin: 0 auto;
-}
 [class*="__text"] {
 	color: #6C757D;
 	font-size: 14px;
@@ -36,25 +37,11 @@ img{
 	line-height: 1.78;
 	margin-bottom: 38px;
 }
-.header {
-	padding-top: 115px;
-	margin-bottom: 80px;
-}
-.main {
-	margin-bottom: 80px;
-}
-.footer{
-	padding-bottom: 60px;
-}
-.footer__image {
-	font-size: 0;
-	max-width: 1255px;
-	margin: 80px auto;
+[class*="__image"] {
 	text-align: center;
+	margin-bottom: 80px ;
+	font-size: 0;
 }
-.footer__img{
-}
-#woman{
-	margin-right: 30px;
-	margin-bottom: 30px;
+.footerblock__img{
+	margin: 0px 30px 30px 0px;
 }
