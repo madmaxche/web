@@ -1,0 +1,181 @@
+@import url("reset.css");
+
+body {
+	font-family: Arial, "Helvetica Neue", Helvetica, sans-serif;
+	font-size: 50px;
+}
+
+.block {
+	padding: 30px;
+	/* height: 1000px; */
+
+	/* Окремі властивості */
+
+	/* Визначає колір фону елемента */
+	/* background-color: rgba(0, 128, 0, 0.5); */
+
+	/* 
+	Встановлює фонове зображення елемента 
+	або задає градієнтну заливку 
+	!! Зображення НЕ встановлює розміри об'єкту
+	*/
+	/* background-image: url("../img/01.png"); */
+	/* background-image: linear-gradient(55.95deg, #ff3f3a 0%, #f75e05 100%); */
+	/* Генератор градієнту https://cssgradient.io/ */
+
+	/* Визначає, як повторюватиметься фонове зображення */
+
+	/* Зображення-паттерн */
+	/* background-image: url("../img/repeat.jpg"); */
+
+	/* (за замовченням) */
+	/* background-repeat: repeat; */
+	/* Не повторяти */
+	/* background-repeat: no-repeat; */
+	/* Повтор по горизонталі */
+	/* background-repeat: repeat-x; */
+	/* Повтор по вертикалі */
+	/* background-repeat: repeat-y; */
+
+	/*
+	Задає початкове положення фонового зображення,
+	де перше значення (відсотки, px, слово) 
+	визначає розташування по горизонталі,
+	друге – вертикалі.
+
+	
+
+	0 0 (або left top) - за замовченням 
+	center
+	top
+	left 
+	bottom
+	right
+	*/
+
+	/*
+	background-image: url("../img/image.jpg");
+	background-repeat: no-repeat;
+	*/
+	/* background-position: горизонталь вертикаль */
+	/* background-position: 0 0; */
+
+	/* 
+	Значення у відсотках:
+	Горизонтальне залежить від штрини об'єкту
+	Верстикальне від висоти об'єкту
+	Значення 50% (center) розмістить зображення таким чином, 
+	що центральна точка зображення буде співпадати 
+	з центральною точкою об'єкту
+	*/
+
+	/* 
+	Встановлює, чи прокручуватиметься 
+	фонове зображення разом із вмістом елемента.
+
+	scroll - (за замовченням) скролиться разом з блоком
+	fixed - фонове зображення НЕ скролиться разом з блоком
+	*/
+
+	/*
+	background-image: url("../img/image.jpg");
+	background-repeat: no-repeat;
+	background-attachment: fixed;
+	*/
+
+	/*
+	Масштабує фонове зображення згідно з заданими розмірами. 
+	У цифрах, де перше значення (відсотки, px) визначає ширину,
+	друге – висоту. Або спеціальним значенням.
+
+	contain - Масштабує зображення зі збереженням пропорцій таким чином, 
+	щоб картинка повністю помістилася всередину блоку. 
+	Тобто щонайменше картинки
+	cover - Масштабує зображення зі збереженням пропорцій так, 
+	щоб його ширина або висота дорівнювала ширині або висоті блоку. 
+	Тобто з більшого боку картинки
+
+	*/
+
+	/*
+	background-image: url("../img/01.png");
+	background-repeat: no-repeat;
+	background-position: center;
+	*/
+
+	/* background-size: ширина висота */
+	/* background-size: auto auto; */
+	/* background-size: cover; */
+
+	/* 
+	Універсальна властивість - background
+	Властивість background
+	Ця універсальна CSS властивість дозволяє одночасно 
+	задати кілька параметрів фону,
+	а саме визначити колір,  встановити фонове зображення, 
+	задати початкове положення фонового зображення,
+	визначити як повторюватиметься фонове зображення, 
+	встановити чи прокручуватиметься фонове зображення 
+	разом із вмістом і масштабувати фонове зображення 
+	відповідно до заданих розмірів.
+	Також значенням властивості background може 
+	бути вказана градієнтна заливка фону.
+	*/
+
+	/* background: колір зображення(градієнт) позиція / розмір повтор закріплення */
+	/* background: green url("../img/image.jpg") center / contain no-repeat scroll; */
+
+	/* Встановлення кількох фонових зображень для блоку */
+
+	/* background: url("../img/icons/check.svg") 0 0 no-repeat, url("../img/image.jpg") 50% no-repeat, rgba(0, 128, 0, 0.438) url("../img/01.png") center / auto no-repeat; */
+}
+
+/* Шпаргалка background */
+/* https://fls.guru/cssbackground.html */
+
+/* Приклади */
+
+main {
+}
+/* Стиль списку */
+.list {
+}
+.list li {
+	font-size: 35px;
+	line-height: 1.2;
+	background: url("../img/icons/check.svg") 0 0 / 50px no-repeat;
+	margin-bottom: 20px;
+	padding-left: 70px;
+	padding-top: 5px;
+	/* Запобіжник */
+	min-height: 48px;
+}
+
+/* Контейнер */
+
+[class*="__container"] {
+	max-width: 1200px;
+	padding-left: 15px;
+	padding-right: 15px;
+	margin: 0 auto;
+}
+
+.about {
+	background-color: grey;
+	padding-bottom: 50px;
+	padding-top: 50px;
+}
+.about__container {
+}
+.contacts {
+	padding-bottom: 50px;
+	padding-top: 50px;
+	background-color: yellowgreen;
+}
+.contacts__container {
+}
+
+.fixed {
+	height: 500px;
+	background: url("../img/01.png") center / cover repeat fixed;
+}
