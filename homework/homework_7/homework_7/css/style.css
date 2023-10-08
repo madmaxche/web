@@ -84,7 +84,7 @@
 
 .footerblock{
 	font-family: "Inter", sans-serif;
-	padding: 145px 0px 145px 10%;
+	padding: 145px 10% 145px 10%;
 	background: rgb(244,247,255);
 background: url('../img/footer/speaker.png') 75% 50% no-repeat, linear-gradient(120deg, rgba(244,247,255,1) 64%, rgba(228,234,251,1) 64%, rgba(208,219,249,1) 69%, rgba(188,203,247,1) 69%);
 }
@@ -121,4 +121,16 @@ background: url('../img/footer/speaker.png') 75% 50% no-repeat, linear-gradient(
 	font-size: 16px;
 	font-weight: 600;
 	line-height: 1.5; /* 150% */
+}
+
+/* ------------------------------------------------------------------------------------ */
+
+@media (max-width: 1200px){
+	.footerblock__text {
+		padding: 15px;
+		background: rgba(255, 255, 255, 0.7);
+	}
+	.footerblock__button{
+		text-align: center;
+	}
 }
