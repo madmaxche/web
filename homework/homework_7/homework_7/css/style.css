@@ -1,0 +1,43 @@
+/* ----------------- */
+/* --RESET STYLES--- */
+/* ----------------- */
+@import url("reset.css");
+
+@import url("https://fonts.googleapis.com/css?family=Poppins:300,700&display=swap");
+
+body {
+	
+}
+[class*="__container"] {
+	max-width: 1270px;
+	margin: 0px auto;
+	padding: 0px 15px;
+}
+.headerblock {
+	font-family: "Poppins", sans-serif;
+	min-height: 100vh;
+	background: url('../img/header/headerback.jpg') center / cover no-repeat;
+	color: #E5E5E5;
+	font-size: 12px;
+	font-weight: 300;
+	line-height: 1.66;
+}
+.headerblock * {
+	margin-bottom: 15px;
+}
+.headerblock__container {
+}
+.headerblock__text {
+	padding: 330px 10% 100px;
+}
+.headerblock__date {
+}
+.headerblock__title {
+	max-width: 579px;
+	color: #F8F9FA;
+	font-size: 25px;
+	font-weight: 700;
+	line-height: 1.6;
+}
+.headerblock__subtitle {
+}
