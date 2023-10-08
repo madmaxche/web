@@ -6,9 +6,8 @@
 @import url("https://fonts.googleapis.com/css?family=Poppins:300,700&display=swap");
 @import url("https://fonts.googleapis.com/css?family=Inter:regular,700&display=swap");
 
-body {
-	
-}
+/* ------------------------------------------------------------------------------------ */
+
 [class*="__container"] {
 	max-width: 1270px;
 	margin: 0px auto;
@@ -36,11 +35,11 @@ body {
 	font-weight: 700;
 }
 
-
+/* ------------------------------------------------------------------------------------ */
 
 .mainblock {
 	padding:  10%;
-	font-style: 'Inter', sans-serif;
+	font-family: 'Inter', sans-serif;
 	color: #637381;
 	font-size: 16px;
 	font-weight: 700;
@@ -79,4 +78,47 @@ body {
 .blue-star {
 	background: url('../img/main/blue-star.svg') 0 0 no-repeat;
 	margin-bottom: 20px;
+}
+
+/* ------------------------------------------------------------------------------------ */
+
+.footerblock{
+	font-family: "Inter", sans-serif;
+	padding: 145px 0px 145px 10%;
+	background: rgb(244,247,255);
+background: url('../img/footer/speaker.png') 75% 50% no-repeat, linear-gradient(120deg, rgba(244,247,255,1) 64%, rgba(228,234,251,1) 64%, rgba(208,219,249,1) 69%, rgba(188,203,247,1) 69%);
+}
+.footerblock__text {
+	max-width: 570px;
+	margin-bottom: 35px;
+}
+.footerblock__price {
+	color: #3056D3;
+	font-size: 18px;
+	font-weight: 600;
+	line-height: 1.33; /* 133.333% */
+	margin-bottom: 13px;
+}
+.footerblock__title {
+	color: #212B36;
+	font-size: 36px;
+	font-weight: 700;
+	line-height: 1.25; /* 125% */
+	margin-bottom: 15px;
+}
+.footerblock__subtitle {
+	color:#637381;
+	font-size: 16px;
+	font-weight: 500;
+	line-height: 1.5; /* 150% */
+}
+.footerblock__link {
+	padding: 10px 30px;
+	display: inline-block;
+	border-radius: 30px;
+	background: #3056D3;
+	color:#FFF;
+	font-size: 16px;
+	font-weight: 600;
+	line-height: 1.5; /* 150% */
 }
