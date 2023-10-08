@@ -4,6 +4,7 @@
 @import url("reset.css");
 
 @import url("https://fonts.googleapis.com/css?family=Poppins:300,700&display=swap");
+@import url("https://fonts.googleapis.com/css?family=Inter:regular,700&display=swap");
 
 body {
 	
@@ -25,19 +26,57 @@ body {
 .headerblock * {
 	margin-bottom: 15px;
 }
-.headerblock__container {
-}
 .headerblock__text {
-	padding: 330px 10% 100px;
-}
-.headerblock__date {
+	padding: 330px 0 100px;
 }
 .headerblock__title {
 	max-width: 579px;
 	color: #F8F9FA;
 	font-size: 25px;
 	font-weight: 700;
-	line-height: 1.6;
 }
-.headerblock__subtitle {
+
+
+
+.mainblock {
+	padding:  10%;
+	font-style: 'Inter', sans-serif;
+	color: #637381;
+	font-size: 16px;
+	font-weight: 700;
+}
+.mainblock__title {
+	color: #212B36;
+	font-size: 26px;
+	font-weight: 400;
+	margin-bottom: 45px;
+}
+.list {
+	margin-bottom: 60px;
+}
+.list__item {
+	margin-bottom: 18px;
+	min-height: 32px;
+	padding: 2px 0px 0px 30px;
+}
+.ellipse {
+	margin-bottom: 18px;
+	background: url('../img/main/ellipse.svg') 0 4px no-repeat;
+	padding: 0px 0px 0px 18px;
+}
+.red-circle {
+	background: url('../img/main/red-circle.svg') 0 0px no-repeat;
+}
+.blue-check {
+	background: url('../img/main/blue-check.svg') 0 0 no-repeat;
+}
+.blue-arrow {
+	background: url('../img/main/blue-arrow.svg') 0 5px no-repeat;
+}
+.green-check {
+	background: url('../img/main/green-check.svg') 0 0 no-repeat;
+}
+.blue-star {
+	background: url('../img/main/blue-star.svg') 0 0 no-repeat;
+	margin-bottom: 20px;
 }
