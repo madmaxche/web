@@ -5,6 +5,18 @@ body {
 	padding: 20px;
 }
 
+.block {
+
+}
+.block__item {
+	visibility: hidden;
+}
+.block__item:hover {
+	visibility: visible;
+}
+.block:hover .block__item{
+	visibility: visible;
+}
 /* =============== Псевдокласи ================= */
 
 /* Анатомія псевдокласів */
