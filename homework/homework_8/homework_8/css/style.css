@@ -5,3 +5,33 @@
 
 @import url("https://fonts.googleapis.com/css?family=Poppins:300,regular,700&display=swap");
 @import url("https://fonts.googleapis.com/css?family=Inter:300,regular,700&display=swap");
+
+
+[class*="__container"] {
+	max-width: 1270px;
+	margin: 0px auto;
+	padding: 0px 15px;
+}
+
+.headerblock {
+	background: url('../img/header/headerback.jpg') center/ cover no-repeat;
+	min-height: 600px;
+	padding: 330px 10% 100px 10%;
+}
+.headerblock__text{
+	font-family: 'Poppins', sans-serif;
+	line-height: 1.66;
+	font-weight: 300;
+	color: #E5E5E5;
+	font-size: 12px;
+	max-width: 605px;
+}
+.headerblock__text  *:not(:last-child){
+	margin-bottom: 15px;
+}
+.headerblock__title {
+	color: #F8F9FA;
+	font-size: 25px;
+	font-weight: 700;
+	line-height: 1.6;
+}
