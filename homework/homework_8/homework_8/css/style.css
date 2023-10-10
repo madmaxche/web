@@ -13,6 +13,8 @@
 	padding: 0px 15px;
 }
 
+/* ----------------- ----------------- ----------------- ----------------- */
+
 .headerblock {
 	background: url('../img/header/headerback.jpg') center/ cover no-repeat;
 	min-height: 600px;
@@ -35,3 +37,64 @@
 	font-weight: 700;
 	line-height: 1.6;
 }
+
+/* ----------------- ----------------- ----------------- ----------------- */
+
+.mainblock {
+	padding: 50px 0px;
+	font-family: 'Inter', sans-serif;
+}
+.mainblock *:not(:last-child){
+	margin-bottom: 45px;
+}
+.mainblock__title {
+	margin-bottom: 45px;
+	color: #212B36;
+	font-size: 26px;
+	font-weight: 400;
+	line-height: 1.07;
+}
+.mainblock__text ul:not(:last-child){
+	margin-bottom: 60px;
+}	
+.list__item {
+	color: #637381;
+	font-size: 16px;
+	font-weight: 700;
+}
+.list li:not(:last-child){
+	margin-bottom: 18px;
+}
+
+.mainblock__text ul:nth-child(1) li::before {
+	content: "";
+	display: inline-block;
+	background: url('../img/main/ellipse.svg') 0 0px no-repeat;
+	width: 15px;
+	height: 15px;
+	margin-bottom: -5px;
+}
+.mainblock__text ul:nth-child(2) li::before {
+	background: url('../img/main/red-circle.svg') 0px 0px no-repeat;
+}
+.mainblock__text ul:nth-child(3) li::before {
+	background: url('../img/main/blue-check.svg')  0px 0px  no-repeat;
+}
+.mainblock__text ul:nth-child(4) li::before {
+	background: url('../img/main/arrow-right.svg')  0px 6px no-repeat;
+}
+.mainblock__text ul:nth-child(5) li::before {
+	background: url('../img/main/green-check.svg')  0px 0px  no-repeat;
+}
+.mainblock__text ul:nth-child(6) li::before {
+	background: url('../img/main/blue-star.svg') 0px 0px  no-repeat;
+}
+.mainblock__text ul > li::before{
+	content: "";
+	display: inline-block;
+	width: 20px;
+	height: 20px;
+	margin: 0px 10px -4px 0px;
+}
+
+/* ----------------- ----------------- ----------------- ----------------- */
