@@ -1,0 +1,7 @@
+/* ----------------- */
+/* --RESET STYLES--- */
+/* ----------------- */
+@import url("reset.css");
+
+[class*="__container"] {
+}

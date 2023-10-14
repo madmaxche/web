@@ -1,0 +1,10 @@
+@import url("reset.css");
+
+body {
+	font-family: Arial, "Helvetica Neue", Helvetica, sans-serif;
+	padding: 20px;
+}
+
+.image {
+	width: 393px;
+}
