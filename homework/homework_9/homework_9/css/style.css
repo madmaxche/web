@@ -3,5 +3,11 @@
 /* ----------------- */
 @import url("reset.css");
 
+@import url("https://fonts.googleapis.com/css?family=Inter:300,regular,700&display=swap");
+/*
+color 3056D3
+color 212B36
+color 090E34
+ */
 [class*="__container"] {
 }
