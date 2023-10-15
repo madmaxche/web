@@ -1,0 +1,442 @@
+<!DOCTYPE html>
+<html lang="uk">
+	<head>
+		<meta charset="UTF-8">
+		<meta name="viewport" content="width=device-width, initial-scale=1.0">
+		<link rel="stylesheet" href="css/style.css">
+		<title>Lesson 10</title>
+	</head>
+	<body>
+		<header></header>
+		<main>
+			<!-- Про компонентний підхід у верстці -->
+			<!-- Створюємо частини, потім складаємо як конструктор -->
+
+			<!-- Б.Е.М. -->
+			<!-- БЕМ-Блок -->
+			<!-- 
+			НЕЗАЛЕЖНИЙ, САМОДОСТАТНІЙ об'єкт.
+			НЕ впливає на оточення (сусідні об'єкти).
+
+			І'мя класу БЕМ-блоку:
+			1) І'мя має відповідати змісту або конструкції блоку. Перевірочне питання - "Що це?"
+			2) Англійска мова (Латиниця)
+			3) Нижній регістр
+			4) Якщо слів декілька, розділяємо дефісом (-).
+			5) При формуванні імені не має бути ієрархії
+
+			Дозволяється вкладення будь-якої кількості БЕМ-блоків один в одного.
+			-->
+
+			<!-- Приклади -->
+			<div class="page-header">
+				<!-- Контент БЕМ-блоку -->
+				<!-- ... -->
+				<!-- Ще БЕМ-блок -->
+				<a href="" class="button">Text</a>
+			</div>
+
+
+
+			<!-- БЕМ-Элемент -->
+			<!-- 
+			ЗАЛЕЖНИЙ об'єкт від СВОГО БЕМ-блоку
+			ЗАВЖДИ знаходиться всередені СВОГО БЕМ-блоку (вкладений)
+			МОЖЕ впливати на на оточення (сусідні об'єкти).
+
+			І'мя класу БЕМ-елементу:
+			0) ЗАВЖДИ починається з імені першого батьківського БЕМ-блоку і відокремлюється двома підкресленнями (__).
+			1) І'мя має відповідати змісту або конструкції блоку. Перевірочне питання - "Що це?"
+			2) Англійска мова (Латиниця)
+			3) Нижній регістр
+			4) Якщо слів декілька, розділяємо дефісом (-).
+			5) При формуванні імені не має бути ієрархії
+
+			БЕМ-елементи можна вкладати в інші БЕМ-елементи свого БЕМ-блоку
+		  	-->
+			<!-- Приклади -->
+			<div class="page-header">
+				<!-- БЕМ-елемент container БЕМ-блоку page-header -->
+				<div class="page-header__container">
+					<h1 class="page-header__title">About</h1>
+					<div class="page-header__text">
+						It is a long established fact that a reader will be distracted by the readable content of a page when looking at its layout.
+					</div>
+				</div>
+			</div>
+
+
+			<!-- Інша сторінка -->
+			<div class="page-header">
+				<!-- БЕМ-елемент container БЕМ-блоку page-header -->
+				<div class="page-header__container">
+					<h1 class="page-header__title">Services</h1>
+					<div class="page-header__text">
+						It is a long established fact that a reader will be distracted by the readable content of a page when looking at its layout.
+					</div>
+				</div>
+			</div>
+
+
+
+
+			<!-- Модифікатор -->
+			<!-- 
+			Дозволяє вносити відмінності
+			для БЕМ-блоків або БЕМ-елементів
+
+			І'мя класу БЭМ модифікатора:
+			0) Додається до існуючого БЕМ-класу блоку або елементу.
+			1) ЗАВЖДИ починається з існуючого БЕМ-класу блоку або елементу і відокремлюється одним підкресленням (_) або подвійним дфісом (--)
+			2) І'мя має відповідати модифікаціям. Перевірочне питання - "Який? Що змінено?"
+			3) Англійска мова (Латиниця)
+			4) Нижній регістр
+			5) Якщо слів декілька, розділяємо дефісом (-).
+			6) При формуванні імені не має бути ієрархії
+			-->
+
+			<!-- Приклади -->
+			<!-- Сторінка №1 -->
+			<div class="page-header page-header_margin-about">
+				<!-- БЕМ-елемент container БЕМ-блоку page-header -->
+				<div class="page-header__container">
+					<h1 class="page-header__title">About</h1>
+					<div class="page-header__text">
+						It is a long established fact that a reader will be distracted by the readable content of a page when looking at its layout.
+					</div>
+				</div>
+			</div>
+			<!-- Сторінка №2 -->
+			<div class="page-header page-header_margin-services">
+				<!-- БЕМ-елемент container БЕМ-блоку page-header -->
+				<div class="page-header__container">
+					<h1 class="page-header__title">Services</h1>
+					<div class="page-header__text">
+						It is a long established fact that a reader will be distracted by the readable content of a page when looking at its layout.
+					</div>
+				</div>
+			</div>
+			<!-- Сторінка №3 -->
+			<div class="page-header">
+				<!-- БЕМ-елемент container БЕМ-блоку page-header -->
+				<div class="page-header__container">
+					<h1 class="page-header__title">Services</h1>
+					<div class="page-header__text">
+						It is a long established fact that a reader will be distracted by the readable content of a page when looking at its layout.
+					</div>
+				</div>
+			</div>
+
+			<!-- Ще приклади -->
+			<a href="" class="button">Text</a>
+			<a href="" class="button button_white">Text</a>
+
+
+			<div class="block">
+				<h2 class="block__title">Title</h2>
+			</div>
+
+			<div class="block">
+				<h2 class="block__title block__title_font-size-35">Title</h2>
+			</div>
+
+			<div class="block">
+				<h2 class="block__title block__title_green">Title</h2>
+			</div>
+
+			<div class="block">
+				<h2 class="block__title block__title_green block__title_font-size-35">Title</h2>
+			</div>
+
+
+			<!-- БЕМ-Мікс -->
+			<!-- 
+			Після того як ви опануєте блок елемент модифікатор, саме час використовувати мікси
+			Мікс - це одночасне використання і БЕМ-блоку і БЕМ-елементу для одного об'єкту.
+
+			Переваги міксу:
+			- вивільнення зрозумілих слів для нових елементів
+			- можливість викорістання CSS-властивостей, які впливають на оточення, фактично для БЕМ-блоку (БЕМ-елемент в ролі модифікатора)
+			- паралельне відокремлення певної структури в БЕМ-блок
+			-->
+
+			<!-- Приклади -->
+
+			<!-- Микс де створюється елемент для подальшого використання в якості модификатору -->
+			<!-- Сторінка About -->
+			<div class="about">
+				<!-- ...якийсь код... -->
+				<!-- Це БЕМ-блок page-header, а також це БЕМ-елемент БЕМ-блоку about -->
+				<div class="page-header about__page-header">
+					<!-- БЕМ-елемент container БЕМ-блоку page-header -->
+					<div class="page-header__container">
+						<h1 class="page-header__title">About</h1>
+						<div class="page-header__text">
+							It is a long established fact that a reader will be distracted by the readable content of a page when looking at its layout.
+						</div>
+					</div>
+				</div>
+
+				<!-- .... якийсь код ... -->
+			</div>
+			<!-- Сторінка Services -->
+			<div class="services">
+				<!-- ...якийсь код... -->
+				<div class="page-header services__page-header">
+					<!-- БЕМ-елемент container БЕМ-блоку page-header -->
+					<div class="page-header__container">
+						<h1 class="page-header__title">Services</h1>
+						<div class="page-header__text">
+							It is a long established fact that a reader will be distracted by the readable content of a page when looking at its layout.
+						</div>
+					</div>
+				</div>
+				<!-- .... якийсь код ... -->
+			</div>
+
+			<!-- Микс де створюється окремий БЕМ-блок для звільнення зручних слів -->
+			<div class="content">
+				<div class="content__container">
+					<h1 class="content__title"></h1>
+					<div class="content__text">
+						<p></p>
+					</div>
+					<div class="content__body">
+						<div class="content__items">
+							<div class="content__item item-content">
+								<h4 class="item-content__title"></h4>
+								<div class="item-content__body"></div>
+							</div>
+						</div>
+					</div>
+				</div>
+			</div>
+
+			<!-- Микс де створюється окремий БЕМ-блок для відокремлення певної структури -->
+
+			<!-- БЕМ-блок content -->
+			<div class="content">
+				<div class="content__container">
+					<div class="content__items">
+						<!-- Загальний БЕМ-блок item-content -->
+						<div class="content__item item-content">
+							<h4 class="item-content__title"></h4>
+							<div class="item-content__body"></div>
+						</div>
+					</div>
+				</div>
+			</div>
+
+			<!-- БЕМ-блок contacts -->
+			<div class="contacts">
+				<div class="contacts__container">
+					<div class="contacts__items">
+						<!-- Загальний БЕМ-блок item-content -->
+						<div class="contacts__item item-content">
+							<h4 class="item-content__title"></h4>
+							<div class="item-content__body"></div>
+						</div>
+					</div>
+				</div>
+			</div>
+
+
+
+			<!-- Практика -->
+
+			<!-- Практика БЕМ-блоків -->
+
+			<!-- Невірно -->
+			<div class="aboutUs"></div>
+			<!-- Вірно -->
+			<div class="about-us"></div>
+
+			<!-- Невірно -->
+			<div class="content">
+				<!-- Спроба ієрархії -->
+				<div class="content-body">
+					<!-- Тут все вірно -->
+					<a href="" class="button-content"></a>
+				</div>
+			</div>
+			<!-- Вірно -->
+			<div class="content">
+				<!-- Законий обхід ієрархії -->
+				<div class="body-content">
+					<!-- Законий обхід ієрархії -->
+					<a href="" class="button-content"></a>
+				</div>
+			</div>
+
+			<!-- Невірно -->
+			<div class="contacts text">
+			</div>
+			<!-- Вірно -->
+			<div class="contacts">
+				<div class="text"></div>
+			</div>
+
+			<!-- Практика БЕМ-блоків та БЕМ-елементів -->
+			<!-- Невірно -->
+			<div class="about-us">
+				<div class="about-us__container">
+					<!-- Спроба ієрархії, не вірний синтаксис -->
+					<div class="about-us__container__title"></div>
+				</div>
+			</div>
+			<!-- Вірно -->
+			<div class="about-us">
+				<div class="about-us__container">
+					<div class="about-us__title"></div>
+				</div>
+			</div>
+
+			<!-- Невірно -->
+			<div class="text">
+				<div class="text__body">
+					<!-- Вказаний елемент не існуючого блоку -->
+					<div class="text-body__item">
+						<a href="" class="button"></a>
+					</div>
+				</div>
+			</div>
+			<!-- Вірно -->
+			<div class="text">
+				<div class="text__body">
+					<div class="text__item">
+						<a href="" class="button"></a>
+					</div>
+				</div>
+			</div>
+
+			<!-- Невірно -->
+			<div class="content">
+				<a href="" class="content__link"></a>
+				<div class="text">
+					<div class="text__item">
+						<!-- БЕМ-Елементи НЕ свого БЕМ-блоку -->
+						<div class="content__body">
+							<div class="content__text"></div>
+						</div>
+					</div>
+				</div>
+			</div>
+			<!-- Вірно -->
+			<div class="content">
+				<a href="" class="content__link"></a>
+				<div class="text">
+					<div class="text__item">
+						<div class="text__body">
+							<div class="text__value"></div>
+						</div>
+					</div>
+				</div>
+			</div>
+
+			<!-- Невірно -->
+			<div class="block">
+				<div class="block__text"></div>
+			</div>
+			<!-- БЕМ-Елемент за межами БЕМ-блоку -->
+			<a href="" class="block__link"></a>
+
+			<!-- Вірно -->
+			<div class="block">
+				<div class="block__text"></div>
+				<a href="" class="block__link"></a>
+			</div>
+
+			<!-- Практика БЕМ-модифікаторів -->
+
+			<!-- Вірно -->
+			<div class="text">
+				<a href="" class="text__link"></a>
+				<a href="" class="text__link text__link_red"></a>
+			</div>
+
+			<!-- Вірно -->
+			<div class="content content_margin">
+				<a href="" class="button"></a>
+			</div>
+
+			<!-- Невірно -->
+			<div class="block">
+				<a href="" class="block__link"></a>
+				<div class="block__text"></div>
+				<!-- Немає повтору класу для модифікатора -->
+				<div class="block__text block_red"></div>
+			</div>
+			<!-- Вірно -->
+			<div class="block">
+				<a href="" class="block__link"></a>
+				<div class="block__text"></div>
+				<div class="block__text block__text_red"></div>
+			</div>
+
+
+			<!-- Практика БЕМ-міксів -->
+			<!-- Вірно -->
+			<div class="contacts">
+				<div class="contacts__body">
+					<div class="contacts__row">
+						<div class="contacts__column">
+							<div class="contacts__item item">
+								<div class="item__title"></div>
+								<a href="" class="item__link"></a>
+							</div>
+						</div>
+					</div>
+				</div>
+			</div>
+
+			<!-- Невірно -->
+			<div class="text">
+				<!-- Спроба ієрархії -->
+				<div class="text__item text-item">
+					<div class="text-item__title"></div>
+					<a href="" class="text-item__link"></a>
+					<div class="text-item__text"></div>
+				</div>
+			</div>
+			<!-- Вірно -->
+			<div class="text">
+				<!-- Спроба ієрархії -->
+				<div class="text__item item-text">
+					<div class="item-text__title"></div>
+					<a href="" class="item-text__link"></a>
+					<div class="item-text__text"></div>
+				</div>
+			</div>
+
+			<!-- Часті слова -->
+			<!-- 
+				container - обмежуючий контейнер (block__container)
+				body, content - головна частина блоку (block__body)
+				row - рядок
+				column - колонка
+				link - посилання
+				title - заголовок
+				sub-title - підзаголовок
+				label - ще заголовок
+				text
+				list - список
+				items - багато якихось елементів
+				item - будь-що
+				menu
+				block
+				button
+				picture, image, img
+				section
+				article
+				unit
+				actions, action
+				value
+				search
+				form
+				page
+				box
+			 -->
+		</main>
+		<footer></footer>
+	</body>
+</html>
