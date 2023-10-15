@@ -3,11 +3,82 @@
 /* ----------------- */
 @import url("reset.css");
 
-@import url("https://fonts.googleapis.com/css?family=Inter:300,regular,700&display=swap");
+@import url("https://fonts.googleapis.com/css?family=Inter:300,regular,500,700&display=swap");
 /*
 color 3056D3
 color 212B36
 color 090E34
  */
-[class*="__container"] {
+body{
+	font-family: 'Inter', sans-serif;
+	font-size: 18px;
+	line-height: 1.6;
+	background: #3056D3;
 }
+img{
+	max-width: 100%;
+}
+/* -------------------------------------------------------------------------- */
+
+[class*="__container"] {
+	max-width: 1200px;
+	padding: 50px 30px;
+	margin: 0px auto;
+}
+[class*="__subtitle"] {
+	text-align: center;
+	text-transform: uppercase;
+	font-weight: 500;
+	font-size: 30px;
+	background: #fff;
+	color: #3056D3;
+	border-radius: 15px;
+	padding: 15px 0;
+}
+[class*="__text"] {
+	font-size: 24px;
+	font-weight: 300;
+	line-height: 1.88;
+	color: #fff;
+}
+[class*="__block"] {
+	padding: 15px 10px;
+	border-radius: 15px;
+	background: #212b3656;
+}
+[class*="__block"]:not(:last-child){
+	margin-bottom: 40px;
+}
+[class*="__block"] *:not(:last-child){
+	margin-bottom: 30px;
+}
+/* -------------------------------------------------------------------------- */
+
+.headerblock__title {
+	font-size: 36px;
+	font-weight: 700;
+	line-height: 2.65;
+	text-transform: uppercase;
+	text-align: center;
+	background:#fff;
+	border-radius: 15px;
+	padding: 15px 30px;
+	max-width: 350px;
+	margin: 0px auto;
+}
+
+/* -------------------------------------------------------------------------- */
+
+.mainblock__images {
+	text-align: center;
+}
+.design {
+	min-height: 600px;
+	background:url('../img/design/design-ellipse.svg') center no-repeat, url('../img/design/ellipse-design.svg') right top no-repeat, url('../img/design/ellipse-design_2.svg') left bottom no-repeat, url('../img/design/main-design.svg') center no-repeat, url('../img/design/photo-design.svg') center no-repeat, url('../img/design/vector_back.svg') center no-repeat,url('../img/design/vector_design.svg') right bottom no-repeat;
+}
+.content img {
+	border-radius: 15px;
+	margin: 10px ;
+}
+
+/* -------------------------------------------------------------------------- */
