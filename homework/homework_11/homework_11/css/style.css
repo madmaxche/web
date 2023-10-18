@@ -6,8 +6,14 @@
 
 /* -------------------------------------------------------------------------------- */
 
-[class*="__container"] {
+.wrapper{
+	overflow: clip;
+	min-height: 100%;
 }
+[class*="__container"] {
+	max-width: 0px;
+}
+
 
 /* -------------------------------------------------------------------------------- */
 img{
@@ -15,7 +21,45 @@ img{
 }
 /* -------------------------------------------------------------------------------- */
 
-
+.wrapper {
+}
+.headerblock {
+}
+.headerblock__container {
+}
+.headerblock__row {
+	display: flex;
+}
+.headerblock__logo {
+}
+.headerblock__menu {
+}
+.menu {
+}
+.menu__sub-menu {
+}
+.sub-menu {
+	
+}
+.sub-menu:hover .sub-menu__menu {
+	display: block;
+}
+	
+.sub-menu__link {
+}
+.sub-menu__menu {
+	display: none;
+}
+.sub-menu__item {
+}
+.mainblock {
+}
+.mainblock__container {
+}
+.footerblock {
+}
+.footerblock__container {
+}
 
 /* -------------------------------------------------------------------------------- */
 
