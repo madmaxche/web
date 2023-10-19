@@ -31,9 +31,6 @@ img{
 
 /* -------------------------------------------------------------------------------- */
 
-.headerblock {
-	
-}
 .headerblock__row {
 	position: fixed;
 	width: 100%;
@@ -49,9 +46,6 @@ img{
 	display: inline-block;
 	position: relative;
 	top: 15px;
-}
-.headerblock__menu {
-	
 }
 
 
@@ -86,12 +80,7 @@ img{
 	opacity: 1;
 	visibility: visible;
 }
-.menu__sub-menu {
 
-}
-
-.menu__block {
-}
 .sub-menu {
 	display: none;
 	visibility: hidden;
@@ -107,6 +96,7 @@ img{
 	font-size: 16px;
 	font-weight: 500;
 	line-height: 1.5; /* 150% */
+	padding: 22px 0px;
 }
 .sub-menu::before{
 	content: '';
@@ -123,7 +113,7 @@ img{
 	background: url('../img/icons/arrow-icon.svg') 0 0 no-repeat;
 	width: 10.8px;
 	height: 5.8px;
-	margin-left: 13px;
+	margin-left: 30px;
 	margin-bottom: 2px;
 }
 .sub-menu__item:nth-child(2):hover::after{
@@ -132,7 +122,7 @@ img{
 	background: url('../img/icons/blue-menu-icon.svg') 0 0 no-repeat;
 	width: 5px;
 	height: 9.31px;
-	margin-left: 33px;
+	margin-left: 30px;
 	margin-bottom: 1px;
 }
 .sub-menu__link:hover{
@@ -141,7 +131,10 @@ img{
 }
 .sub-menu__link {
 	display: inline-block;
-	padding: 12px 14px;
+	padding: 0px 24px;
+}
+.sub-menu__item:not(:last-child) {
+	margin-bottom: 13px;
 }
 
 
@@ -169,7 +162,6 @@ img{
 .list__item:not(:last-child){
 	margin-right: 35px;
 }
-
 .headerblock__icon {
 	display: inline-block;
 	position: relative;
@@ -212,17 +204,8 @@ img{
 }
 
 
-.sub-menu__item {
-}
-.fashion {
-	
-}
 .sub-menu__item:hover .fashion__block{
 	display: block;
-}
-.sub-menu__link {
-}
-.fashion__link {
 }
 .fashion__block {
 	padding: 30px 24px 30px 36px;
@@ -251,10 +234,6 @@ img{
 	line-height: 1.5; /* 150% */
 	margin-bottom: 20px;
 }
-.fashion__menu {
-}
-.fashion__item {
-}
 .fashion__item:not(:last-child){
 	margin-bottom: 12px;
 }
@@ -269,9 +248,6 @@ img{
 	text-align: center;
 	color:#FFF;
 	background: url('../img/menu-back.jpg') 0 0 no-repeat;
-}
-.column{
-
 }
 .column__title {
 	text-shadow: 0px 1px 5px rgba(0, 0, 0, 0.22);
@@ -291,10 +267,10 @@ img{
 	border-radius: 2px;
 	background:#3056D3;
 	min-width: 83px;
+	transition: all 0.3s ease 0s;
 }
 .column__button:hover{
 	background:#203b95;
-	border-radius: 5px;
 }
 /* -------------------------------------------------------------------------------- */
 
