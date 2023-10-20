@@ -1,0 +1,595 @@
+@import url("reset.css");
+@import url("common.css");
+
+@import url("https://fonts.googleapis.com/css?family=Inter:regular,500,600&display=swap");
+
+body {
+	font-family: "Inter", sans-serif;
+	background-color: #333;
+	color: #fff;
+}
+.wrapper {
+	overflow: clip;
+	min-height: 100%;
+}
+
+a {
+	color: #794f45;
+}
+h1 {
+	font-size: 40px;
+	margin: 0px 0px 50px 0px;
+}
+h2 {
+	font-size: 30px;
+	margin: 0px 0px 20px 0px;
+}
+p {
+	margin: 20px 0;
+}
+
+.content {
+	padding: 30px 3%;
+}
+.content__block {
+	margin: 0px 0px 50px 0px;
+}
+
+/*
+За допомогою 2D та 3D трансформації 
+ми зможемо зрушувати, повертати, масштабувати 
+елементи та робити багато іншого!
+Задається трансформація властивістю
+transform та її значеннями
+
+transform: функція(ї)-значення властивості;
+
+При вказанні відсоткових значень, 
+відсоток вираховується від розмірів самого об'єкту
+x - від ширини, y - від висоти
+
+При використанні transform, об'єкт стає ближче (вище)
+по осі z. Тобто накриє собою інші об'єкти без влатстивості 
+transform та position. Стає на передній план.
+
+!!!!! НЕ ПРАЦЮЄ з рядковими об'єктами !!!!!!!!
+*/
+
+.items {
+	padding: 15px;
+}
+.item {
+	padding: 10px;
+}
+.item_1 {
+	background-color: #794f45;
+}
+.item_2 {
+	background-color: #77608d;
+	/* 
+	position: relative;
+	margin-top: -20px;
+	 */
+	/*
+	transform: translate(0px,-20px);
+	*/
+	/*
+	position: relative;
+	top:-20px;
+	*/
+}
+.item_3 {
+	background-color: #7a956b;
+}
+
+/* 2D */
+.content__2D .content__wrapper {
+	width: 150px;
+	height: 150px;
+	background-color: rgba(255, 255, 255, 0.1);
+
+	perspective-origin: center;
+	perspective: 400px;
+}
+.content__2D .content__block div {
+	display: flex;
+	text-transform: uppercase;
+	justify-content: center;
+	align-items: center;
+	letter-spacing: 1px;
+	text-align: center;
+	width: 150px;
+	height: 150px;
+	transition: all 0.8s ease 0s;
+}
+
+/*
+translate (x, y)
+Зміщує елемент на нове місце,
+переміщаючи відносно початкового 
+положення об'єкта вправо та вниз,
+використовуючи координати X та Y. 
+Записується так translate (x,y).
+*/
+.content__translate {
+	background-color: #794f45;
+}
+.content__translate:hover {
+	transform: translate(20px, 30px);
+	/* transform: translate(15%, 20%); */
+	/* transform: translateY(10px); */
+	/* transform: translateX(10px); */
+}
+
+/*  
+Scale (x, y)
+Масштабує елементи,
+роблячи їх більшими або меншими.
+1 - це початковий розмір об'єкту
+*/
+.content__scale {
+	/* Дзеркало */
+	/* transform: scale(-1, 1); */
+	transform: scale(1);
+	background-color: #77608d;
+}
+.content__scale:hover {
+	transform: scale(2);
+}
+/*   
+Rotate (n + deg)
+Повертає елементи.
+*/
+.content__rotate {
+	transform: rotate(0deg);
+	/* transform: rotateX(); */
+	/* transform: rotateY(); */
+	background-color: #7a956b;
+}
+.content__rotate:hover {
+	transform: rotate(360deg);
+}
+/* 
+Skew (x + deg, y + deg)
+Деформує (нахиляє) елементи.
+*/
+.content__skew {
+	transform: skew(0deg, 0deg);
+	/* transform: skewX(35deg); */
+	/* transform: skewY(35deg); */
+	background-color: #794f45;
+}
+.content__skew:hover {
+	transform: skew(10deg, 0deg);
+}
+/* 
+Matrix (a, c, b, d, x, y)
+Дозволяє об'єднати кілька функцій 2D-трансформацій в одній.
+*/
+.content__matrix {
+	transform: matrix(1, 0, 0, 1, 0, 0);
+	background-color: #77608d;
+}
+.content__matrix:hover {
+	transform: matrix(1, 0, 0, 2, 50, 0);
+}
+/* 
+Множинні 2D трансформації 
+значення розділяються пробілом
+*/
+.content__multi {
+	background-color: #7a956b;
+	transform: translate(50px, 50px) scale(0.5) rotate(45deg);
+}
+/*
+Transform-origin
+Дозволяє змістити центр трансформації,
+щодо якого відбувається зміна 
+положення/розміру/форми елемента.
+transform-origin: 50% 50%;
+transform-origin: 50%;
+transform-origin: center;
+*/
+.content__transform-origin {
+	background-color: #794f45;
+	transform-origin: 0px 0px;
+	transform: rotate(0deg);
+}
+.content__transform-origin:hover {
+	transform: rotate(-30deg);
+	/* transform: scale(2); */
+}
+
+/* 3D */
+
+/*  
+Perspective,
+perspective-origin
+Встановлення глибини та зміна 
+точки початку координат.
+!! Задаються батьківському елементу!
+perspective-origin: center (за замевченням)
+perspective - не можна вказати у відсотках
+*/
+.content__3D .content__wrapper3d {
+	width: 150px;
+	height: 150px;
+	background-color: rgba(255, 255, 255, 0.1);
+
+	perspective-origin: center;
+	perspective: 400px;
+}
+
+.content__3D .content__wrapper3d div {
+	display: flex;
+	text-transform: uppercase;
+	justify-content: center;
+	align-items: center;
+	letter-spacing: 1px;
+	text-align: center;
+	transition: all 0.8s ease 0s;
+	width: 150px;
+	height: 150px;
+}
+
+.content__perspective {
+	background-color: #7a956b;
+	transform: rotateX(50deg);
+}
+.content__perspective:hover {
+}
+
+/* translate3D 
+За аналогією зі своїм 2D братом,
+це значення визначає переміщення елемента,
+але в 3D-просторі. Крім осі X та Y 
+додається вісь Z.
+!! вісь Z працює лише з перспективою (perspective)
+*/
+.content__translate3D {
+	transform: translate3D(0px, 0px, 0);
+	background-color: #794f45;
+}
+.content__translate3D:hover {
+	transform: translate3D(20px, 20px, 0px);
+}
+
+/* scale3D */
+.content__scale3D {
+	transform: scale3d(1, 1, 1);
+	background-color: #77608d;
+}
+.content__scale3D:hover {
+	transform: scale3d(2, 2, 2);
+}
+
+/* rotate3D  */
+.content__rotate3d {
+	transform: rotate3d(1, 1, 1, 0deg);
+	background-color: #7a956b;
+}
+.content__rotate3d:hover {
+	transform: rotate3d(1, 1, 1, 45deg);
+}
+
+/* matrix3d */
+.content__matrix3d {
+}
+
+/* Multi3D */
+.content__multi3d {
+	background-color: #794f45;
+	transform: translate3d(20px, 20px, 20px) rotate3d(1, 1, 1, 20deg);
+}
+
+/*
+Transform-style
+Визначає, як дочірні елементи мають відображатися у 3D-просторі.
+!!! Задається батьківському елементу разом з perspective!
+transform-style: flat; - за замовченням
+*/
+.content__transform-style-wrapper {
+	width: 150px;
+	height: 150px;
+	background-color: rgba(255, 255, 255, 0.1);
+	perspective: 400px;
+	transform-style: preserve-3d;
+}
+.content__transform-style {
+	display: flex;
+	text-transform: uppercase;
+	justify-content: center;
+	align-items: center;
+	letter-spacing: 1px;
+	text-align: center;
+	transition: all 0.8s ease 0s;
+	width: 150px;
+	height: 150px;
+	transform: rotateX(0deg);
+	background-color: #7a956b;
+}
+.content__transform-style:hover {
+	transform: rotateX(50deg);
+}
+
+/*
+Backface-visibility
+Відображення зворотного боку об'єкта.
+
+backface-visibility: visible; за замовченням
+
+*/
+
+/* Flip */
+.flip {
+	perspective: 500px;
+	transform-style: preserve-3d;
+}
+.flip__body {
+	position: relative;
+	width: 150px;
+	height: 150px;
+	transition: all 0.8s ease 0s;
+	transform-style: preserve-3d;
+}
+.flip__front,
+.flip__back {
+	position: absolute;
+	width: 100%;
+	height: 100%;
+	top: 0;
+	left: 0;
+	display: flex;
+	justify-content: center;
+	align-items: center;
+}
+.flip__front {
+	z-index: 2;
+	transform: rotateY(0deg);
+	background-color: #77608d;
+
+	backface-visibility: hidden;
+}
+.flip__back {
+	transform: rotateY(-180deg);
+	background-color: rgba(121, 79, 69, 0.5);
+}
+.flip:hover .flip__body {
+	transform: rotateY(-180deg);
+}
+
+.wrapper__header {
+	position: fixed;
+	width: 100%;
+	left: 0;
+	top: 0;
+	z-index: 50;
+}
+/* Практика - шапка */
+.header {
+	background-color: #fff;
+}
+.header__container {
+	max-width: 1200px;
+	margin: 0 auto;
+	padding-left: 15px;
+	padding-right: 15px;
+}
+.header__logo {
+	display: inline-block;
+	vertical-align: middle;
+	margin-right: 45px;
+	padding-top: 30px;
+	padding-bottom: 30px;
+}
+.header__menu {
+	display: inline-block;
+	vertical-align: middle;
+}
+.menu {
+}
+.menu__list {
+}
+.menu__item {
+	/* 
+	padding-top: 30px;
+	padding-bottom: 30px;
+	 */
+	display: inline-block;
+	vertical-align: middle;
+}
+.menu__item_parent {
+	position: relative;
+}
+.menu__link {
+	color: #212b36;
+	font-weight: 600;
+	font-size: 16px;
+	line-height: 24px;
+	display: inline-block;
+	padding-left: 15px;
+	padding-right: 15px;
+	padding-top: 8px;
+	padding-bottom: 8px;
+}
+.menu__item_parent .menu__link {
+	padding-right: 35px;
+	position: relative;
+}
+.menu__item_parent .menu__link::after {
+	content: "";
+	position: absolute;
+	right: 15px;
+	top: 50%;
+	margin-top: -3px;
+	width: 10px;
+	height: 6px;
+	background: url("../img/icons/arrow.svg") 0 0 / 100% no-repeat;
+}
+.menu__link:hover {
+	color: #3056d3;
+}
+.menu__item_parent:hover .menu__link {
+	background-color: #f4f7ff;
+	border-radius: 5px;
+	color: #212b36;
+}
+.menu__item_parent:hover .menu__link::after {
+	transform: rotate(-180deg);
+}
+.menu__item_parent:hover .sub-menu {
+	opacity: 1;
+	visibility: visible;
+	transform: translate(0px, 0px);
+}
+
+.header__actions {
+	display: inline-block;
+	vertical-align: middle;
+}
+.actions-header {
+	padding-left: 150px;
+}
+.actions-header__item {
+	display: inline-block;
+	vertical-align: middle;
+	position: relative;
+}
+.actions-header__item:not(:last-child) {
+	margin-right: 20px;
+}
+.actions-header__icon {
+}
+.actions-header__value {
+	position: absolute;
+	right: -5px;
+	top: -5px;
+	border-radius: 50%;
+	background-color: #3056d3;
+	width: 16px;
+	height: 16px;
+	line-height: 16px;
+	text-align: center;
+	color: #fff;
+	font-size: 11px;
+}
+.sub-menu {
+	position: absolute;
+	top: 100%;
+	left: 0;
+	width: 180px;
+	opacity: 0;
+	visibility: hidden;
+	padding-top: 40px;
+	transform: translate(0px, 10px);
+
+	transition: all 0.3s;
+}
+.sub-menu__list {
+	background-color: #fff;
+	border-radius: 5px;
+	border: 1px solid #e7e7e7;
+	padding: 22px 0;
+	position: relative;
+}
+.sub-menu__list::before {
+	content: "";
+	position: absolute;
+	left: 10px;
+	top: -10px;
+	width: 0;
+	height: 0;
+	border-radius: 3px;
+	border-left: 10px solid transparent;
+	border-right: 10px solid transparent;
+	border-bottom: 10px solid #fff;
+}
+
+.sub-menu__item {
+	padding: 0 24px;
+}
+.sub-menu__item:not(:last-child) {
+	margin-bottom: 13px;
+}
+.sub-menu__link {
+	color: #637381;
+	display: block;
+	font-size: 16px;
+	line-height: 1.5; /* 24/16 */
+	font-weight: 500;
+	position: relative;
+}
+.sub-menu__item:hover .sub-menu__link {
+	color: #3056d3;
+}
+
+.sub-menu__item_parent {
+	position: relative;
+}
+.sub-menu__item_parent .sub-menu__link::after {
+	content: "";
+	position: absolute;
+	right: 0px;
+	top: 50%;
+	margin-top: -3px;
+	transform: rotate(-90deg);
+	width: 10px;
+	height: 6px;
+	background: url("../img/icons/arrow.svg") 0 0 / 100% no-repeat;
+}
+
+.sub-menu__item_parent {
+}
+
+.sub-menu__item_parent:hover .sub-content {
+	opacity: 1;
+	visibility: visible;
+}
+
+.sub-content {
+	opacity: 0;
+	visibility: hidden;
+	position: absolute;
+	left: 100%;
+	top: 0;
+	background-color: #fff;
+	border-radius: 5px;
+	padding: 30px;
+	width: 680px;
+	border: 1px solid #e7e7e7;
+}
+.sub-content__column {
+	display: inline-block;
+	vertical-align: top;
+}
+.sub-content__column:not(:last-child) {
+	margin-right: 80px;
+}
+
+.sub-content__title {
+	color: #212b36;
+	font-size: 16px;
+	line-height: 1.5; /* 24/16 */
+	font-weight: 600;
+}
+.sub-content__title:not(:last-child) {
+	margin-bottom: 20px;
+}
+.sub-content__list {
+}
+.sub-content__item:not(:last-child) {
+	margin-bottom: 13px;
+}
+.sub-content__link {
+	color: #637381;
+	display: block;
+	font-size: 16px;
+	line-height: 1.5; /* 24/16 */
+	font-weight: 500;
+	position: relative;
+}
+.sub-content__link:hover {
+	color: #3056d3;
+}
+.sub-content__banner {
+}
