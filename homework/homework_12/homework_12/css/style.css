@@ -73,7 +73,73 @@ img{
 	background: #ba7729;
 }
 .scale__item:hover{
-	transform: scale(1.2);
+	transform: scale(0.8);
+}
+
+/* -------------------------------------------------------------------------------- */
+
+.rotate__item{
+	background: #ba7729;
+}
+.rotate__item:hover{
+	transform: rotate(45deg);
+}
+
+/* -------------------------------------------------------------------------------- */
+
+.skew__item{
+	background: #ba7729;
+}
+.skew__item:hover{
+	transform: skew(20deg,10deg);
+}
+
+/* -------------------------------------------------------------------------------- */
+
+.matrix__item{
+	background: #ba7729;
+}
+.matrix__item:hover{
+	transform: matrix(1, 0, 0, 1.2, 50, 0);
+}
+
+/* -------------------------------------------------------------------------------- */
+
+.multi__item{
+	background: #ba7729;
+}
+.multi__item:hover{
+	transform: translate(20px,20px) scale(0.8) rotate(45deg) skew(20deg,10deg);
+}
+
+/* -------------------------------------------------------------------------------- */
+
+.origin__item{
+	background: #ba7729;
+	transform-origin: 0 0;
+}
+.origin__item:hover{
+	transform: translate(20px,20px) scale(0.8) rotate(45deg) skew(20deg,10deg);
+}
+
+/* -------------------------------------------------------------------------------- */
+
+.translated__item{
+	background: #ba7729;
+	transform-origin: 0 0;
+}
+.translated__item:hover{
+	transform: translate3d(20px,20px,40px);
+}
+
+/* -------------------------------------------------------------------------------- */
+
+.scaled__item{
+	background: #ba7729;
+	transform-origin: 0 0;
+}
+.scaled__item:hover{
+	transform: scale3d(1.2,0.8,2);
 }
 
 /* -------------------------------------------------------------------------------- */
