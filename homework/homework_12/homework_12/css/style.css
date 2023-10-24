@@ -32,6 +32,7 @@
 	perspective-origin: center;
 	perspective: 400px;
 	margin: 50px auto;
+	transform-style: preserve-3d;
 }
 /* -------------------------------------------------------------------------------- */
 body{
@@ -126,7 +127,6 @@ img{
 
 .translated__item{
 	background: #ba7729;
-	transform-origin: 0 0;
 }
 .translated__item:hover{
 	transform: translate3d(20px,20px,40px);
@@ -136,10 +136,81 @@ img{
 
 .scaled__item{
 	background: #ba7729;
-	transform-origin: 0 0;
 }
 .scaled__item:hover{
 	transform: scale3d(1.2,0.8,2);
 }
 
 /* -------------------------------------------------------------------------------- */
+
+.rotated__item{
+	background: #ba7729;
+}
+.rotated__item:hover{
+	transform: rotate3d(1,1,1,45deg);
+}
+
+/* -------------------------------------------------------------------------------- */
+
+.matrixed__item{
+	background: #ba7729;
+}
+.matrixed__item:hover{
+	transform: matrix3d(1,0.5,0,0,0,1,0,0,0,0,1,0,0,0,0,1);
+}
+
+/* -------------------------------------------------------------------------------- */
+
+.multid__item{
+	background: #ba7729;
+}
+.multid__item:hover{
+	transform: translate3d(0px,0px,0px) scale3d(1.2,0.8,2) rotate3d(1,1,1,45deg);
+}
+
+/* -------------------------------------------------------------------------------- */
+
+.style__item{
+	background: #ba7729;
+}
+.style__item:hover{
+	transform: rotate3d(1,1,1,45deg);
+}
+
+/* -------------------------------------------------------------------------------- */
+.flip{
+	perspective: 500px;
+	padding-bottom: 100px;
+}
+.flip__body {
+	position: relative;
+	width: 150px;
+	height: 150px;
+	transition: all 0.8s ease 0s;
+	transform-style: preserve-3d;
+}
+.flip__font,
+.flip__back {
+	padding-top: 40%;
+	position: absolute;
+	top: 0;
+	left: 0;
+	width: 100%;
+	height: 100%;
+}
+.flip__font {
+	background: #ba7729;
+	z-index: 2;
+	transform: rotateY(0deg);
+	backface-visibility: hidden;
+}
+.flip__back {
+	background: #5119b3;
+	transform: rotateY(-180deg);
+}
+.flip:hover .flip__body {
+	transform: rotateY(-180deg);
+}
+
+/* -------------------------------------------------------------------------------- */
+
