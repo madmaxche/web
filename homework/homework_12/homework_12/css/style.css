@@ -1,0 +1,79 @@
+/* ----------------- */
+/* --RESET STYLES--- */
+/* ----------------- */
+@import url("reset.css");
+@import url("common.css");
+
+@import url("https://fonts.googleapis.com/css?family=Dela+Gothic+One:regular&display=swap");
+/* -------------------------------------------------------------------------------- */
+.wrapper{
+	overflow: clip;
+	min-height: 100%;
+}
+[class*="__container"] {
+	max-width: 1200px;
+	margin: 0px auto;
+	padding: 0px 15px;
+}
+[class*="__body"]{
+	text-transform: uppercase;
+	letter-spacing: 1px;
+	text-align: center;
+	width: 150px;
+	height: 150px;
+	transition: all 0.8s ease 0s;
+	padding-top: 40%;
+}
+[class*="__wrapper"]{
+	width: 150px;
+	height: 150px;
+	background-color: rgba(255, 255, 255, 0.1);
+	margin-bottom: 20px;
+	perspective-origin: center;
+	perspective: 400px;
+	margin: 50px auto;
+}
+/* -------------------------------------------------------------------------------- */
+body{
+	padding-top: 100px;
+	background: #863636;
+	font-family: 'Dela Gothic One', cursive;
+}
+img{
+	max-width: 100%;
+}
+/* -------------------------------------------------------------------------------- */
+.transform__title {
+	text-align: center;
+	font-size: 36px;
+	margin-bottom: 80px;
+	color: #ffffff;
+	text-transform: uppercase;
+}
+.transform__card:not(:last-child) {
+	margin-bottom: 50px;
+}
+.transform__description {
+	font-size: 24px;
+	max-width: 350px;
+	margin: 0px auto;
+}
+/* -------------------------------------------------------------------------------- */
+
+.translate__item{
+	background: #ba7729;
+}
+.translate__item:hover{
+	transform: translate(20px, 20px);
+}
+
+/* -------------------------------------------------------------------------------- */
+
+.scale__item{
+	background: #ba7729;
+}
+.scale__item:hover{
+	transform: scale(1.2);
+}
+
+/* -------------------------------------------------------------------------------- */
