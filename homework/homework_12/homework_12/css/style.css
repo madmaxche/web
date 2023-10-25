@@ -216,15 +216,39 @@ img{
 
 .footerblock {
 	background: #ba7729;
+	
 }
 .footerblock__car {
 	padding: 250px 0px;
 	max-width: 1200px;
 	margin: 0px auto;
+	perspective: 400px;
+	transform-style: preserve-3d;
+	transform-origin: 50% 0px;
 }
 .car {
+	transition: all 0.3s ease 0s;
+}
+.car:hover{
+	transform: translate3d(0px,0px,0px) scale3d(1.2,0.8,2) rotate3d(1,1,1,45deg) ;
 }
 .car__header {
+	border: 3px solid #ceb11d;
+	background: #000;
+	width: 270px;
+	height: 120px;
+	transform: translate(465px, 20px);
+	border-top-left-radius: 50px;
+	border-top-right-radius: 50px;
+	padding: 10px;
+}
+.car__glass{
+	background: #417dd6;
+	width: 250px;
+	height: 110px;
+	border-top-left-radius: 100px;
+	border-top-right-radius: 100px;
+	transform: translateY(20px);
 }
 .car__font {
 	background: #000;
@@ -241,8 +265,21 @@ img{
 	background: #ceb11d;
 	transform: translate(20px, 20px);
 }
+.car__headlights::before{
+	content: '';
+	display: inline-block;
+	width: 20px;
+	height: 10px;
+	background: rgb(253, 253, 4);
+	position: absolute;
+	top: 40px;
+	left: -20px;
+}
 .car__headlights:nth-child(2){
 	transform: translate(230px, -31px);
+}
+.car__headlights:nth-child(2)::before{
+	left: 50px;
 }
 .car__lights{
 	background: #76640e;
@@ -257,12 +294,23 @@ img{
 	height: 10px;
 	transform: translate(440px, 10px);
 }
+.car__footer::after{
+	content: '';
+	display: inline-block;
+	width: 140px;
+	height: 80px;
+	background: rgb(76, 76, 71);
+	position: absolute;
+	top: -80px;
+	left: 90px;
+	border: 15px double rgb(180, 164, 164);
+}
 .car__wheels {
 	width: 40px;
-	height: 40px;
-	background: #676565;
-	transform: translate(450px, 20px);
+	height: 50px;
+	background: #2c2929cb;
+	transform: translate(475px, 10px);
 }
-.car__wheels:nth-child(2){
-transform: translate(570px, 20px);
+.right{
+transform: translate(690px, -40px);
 }
