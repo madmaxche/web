@@ -22,28 +22,63 @@ body{
 }
 /* -------------------------------------------------------------------------------- */
 
-.block {
-	position: absolute;
-	top: 50%;
-	left: 50%;
-	margin: 0px auto;
-	width: 250px;
-	height: 250px;
-	background: #000;
-	transition: all 0.3s ease 0s;
-	animation: block 3s ease 1s infinite alternate ;
+.road {
+	height: 100vh;
+	width: 200px;
+	background: #00000086;
+	position: relative;
+	transform: translate(50vh, 0px);
 }
-.block__animation {
-}
-@keyframes block {
-	0% {
-		transform: rotate(0deg) ;
-	}
-	100% {
-		transform: rotate(360deg)  translate(140px,40px);
-	}
 
+.road__marking {
+	position: absolute;
+	top: 0px;
+	left: 100px;
+	height: 100vh;
+	margin: 0px auto;
+	border-left: 10px double white;
 }
+
+.car {
+	width: 70px;
+	height: 120px;
+	background: #ffffff;
+	position: absolute;
+	top: 0px;
+	left: 15px;
+	transition: all 0.3s ease 0s;
+	animation: move 5s infinite linear  ;
+}
+.black{
+	background: #000000;
+	position: absolute;
+	top: 100%;
+	left: 120px;
+	animation: moves 5s infinite linear  ;
+}
+
+@keyframes move {
+	0%{
+		transform: translate(0px,-120px);
+	}
+	50%{
+		transform: translate(0px,0px);
+	}
+	100%{
+		transform: translate(0px,100vh);
+	}
+	
+}
+@keyframes moves {
+	0%{
+		transform: translate(0px,0px);
+	}
+	50%{
+		transform: translate(0px,-200px);
+	}
+	100%{
+		transform: translate(0px,-1000px);
+	}
 
 /* -------------------------------------------------------------------------------- */
 
