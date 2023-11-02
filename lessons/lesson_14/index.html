@@ -1,0 +1,163 @@
+<!DOCTYPE html>
+<html lang="uk">
+	<head>
+		<meta charset="UTF-8">
+		<meta name="viewport" content="width=device-width, initial-scale=1.0">
+		<link rel="stylesheet" href="css/style.css">
+		<title>Lesson 14</title>
+	</head>
+	<body>
+		<!-- FLEX-container -->
+		<div class="wrapper">
+			<!-- FLEX-element -->
+			<header>
+				я шапка
+			</header>
+			<!-- FLEX-element -->
+			<main class="page">
+				я контент
+				<!-- FLEX-контейнер -->
+				<div class="page__section block">
+					<!-- FLEX-елемент -->
+					<div class="block__column">
+						<div class="block__item">1</div>
+					</div>
+					<!-- FLEX-елемент -->
+					<div class="block__column">
+						<div class="block__item">2</div>
+					</div>
+					<!-- FLEX-елемент -->
+					<div class="block__column">
+						<div class="block__item">3</div>
+					</div>
+					<!-- FLEX-елемент -->
+					<div class="block__column">
+						<div class="block__item">4</div>
+					</div>
+				</div>
+				<!-- Від'ємний margin + padding -->
+				<!-- FLEX-контейнер -->
+				<div class="page__section row">
+					<!-- FLEX-element -->
+					<div class="column">
+						<div class="item">1</div>
+					</div>
+					<!-- FLEX-element -->
+					<div class="column">
+						<div class="item">2</div>
+					</div>
+					<!-- FLEX-element -->
+					<div class="column">
+						<div class="item">3</div>
+					</div>
+					<!-- FLEX-element -->
+					<div class="column">
+						<div class="item">4</div>
+					</div>
+				</div>
+				<!-- приклад з текстом -->
+				<div class="page__section text-block">
+					<h2 class="text-block__title">Title</h2>
+					<div class="text-block__text">
+						<p>
+							Lorem ipsum dolor sit amet consectetur adipisicing elit. Voluptates optio vero, praesentium placeat ullam quam maxime modi? Magnam libero, non eum aliquam porro mollitia ab maiores eius officiis nobis possimus!
+						</p>
+					</div>
+					<a href="" class="text-block__link">link</a>
+				</div>
+				<!-- Приклад з картками -->
+				<div class="page__section cards">
+					<div class="cards__column">
+						<div class="cards__item item-card">
+							<a href="" class="item-card__image">
+								<img src="img/girl.jpg" alt="Image">
+							</a>
+							<div class="item-card__text">
+								<p>
+									Lorem ipsum dolor sit amet consectetur
+								</p>
+							</div>
+							<a href="" class="item-card__button">Link</a>
+						</div>
+					</div>
+					<div class="cards__column">
+						<div class="cards__item item-card">
+							<a href="" class="item-card__image">
+								<img src="img/girl.jpg" alt="Image">
+							</a>
+							<div class="item-card__text">
+								<p>
+									Lorem ipsum dolor sit amet consectetur adipisicing elit. Dolore fugit accusamus laudantium vero beatae ad, suscipit, alias </p>
+							</div>
+							<a href="" class="item-card__button">Link</a>
+						</div>
+					</div>
+					<div class="cards__column">
+						<div class="cards__item item-card">
+							<a href="" class="item-card__image">
+								<img src="img/girl.jpg" alt="Image">
+							</a>
+							<div class="item-card__text">
+								<p>
+									Lorem ipsum dolor sit amet consectetur
+								</p>
+							</div>
+							<a href="" class="item-card__button">Link</a>
+						</div>
+					</div>
+				</div>
+				<!-- Біда з текстом -->
+				<div class="page__section">
+					<a href="" class="link">посилання з текстом</a>
+				</div>
+				<!-- Біда з елементом без flex-shrink -->
+				<div class="page__section">
+					<div class="object">
+						<div class="object__icon"></div>
+						<div class="object__title">
+							Lorem ipsum dolor sit amet consectetur adipisicing elit. Lorem ipsum dolor sit amet consectetur adipisicing elit. Illum voluptas earum nam. Vitae ullam laudantium a aliquam. Voluptate quis minima veniam, voluptates veritatis, ducimus necessitatibus ex atque cupiditate odit consectetur.
+						</div>
+					</div>
+				</div>
+				<!-- Зображення + тайтл + текст -->
+				<div class="page__section">
+					<div class="some-block">
+						<div class="some-block__image">
+							<img src="img/girl.jpg" alt="Image">
+						</div>
+						<div class="some-block__body">
+							<h4 class="some-block__title">Title</h4>
+							<div class="some-block__text">
+								<p>
+									Lorem ipsum, dolor sit amet consectetur adipisicing elit. Incidunt illo sit magni suscipit, omnis dolore dolores reiciendis? Quidem consequatur sed quaerat unde dolor cumque architecto veniam eveniet quasi molestias! Numquam.
+								</p>
+								<p>
+									Lorem ipsum, dolor sit amet consectetur adipisicing elit. Incidunt illo sit magni suscipit, omnis dolore dolores reiciendis? Quidem consequatur sed quaerat unde dolor cumque architecto veniam eveniet quasi molestias! Numquam.
+								</p>
+							</div>
+							<a href="" class="some-block__link">LInk</a>
+						</div>
+					</div>
+				</div>
+				<!-- Обтікання FLOAT -->
+				<div class="page__section">
+					<div class="text">
+						<img class="text__image" src="img/girl.jpg" alt="">
+						<p>
+							Lorem ipsum dolor sit amet consectetur adipisicing elit. Voluptatibus non saepe eum, quaerat reiciendis nulla laborum fugiat facilis quo? Fugiat autem tenetur tempore nisi perferendis sunt nemo accusantium itaque voluptate!</p>
+						<p>
+							Lorem ipsum dolor sit amet consectetur adipisicing elit. Voluptatibus non saepe eum, quaerat reiciendis nulla laborum fugiat facilis quo? Fugiat autem tenetur tempore nisi perferendis sunt nemo accusantium itaque voluptate!</p>
+						<p>
+							Lorem ipsum dolor sit amet consectetur adipisicing elit. Voluptatibus non saepe eum, quaerat reiciendis nulla laborum fugiat facilis quo? Fugiat autem tenetur tempore nisi perferendis sunt nemo accusantium itaque voluptate!</p>
+						<p>
+							Lorem ipsum dolor sit amet consectetur adipisicing elit. Voluptatibus non saepe eum, quaerat reiciendis nulla laborum fugiat facilis quo? Fugiat autem tenetur tempore nisi perferendis sunt nemo accusantium itaque voluptate!</p>
+					</div>
+				</div>
+			</main>
+			<!-- FLEX-element -->
+			<footer>
+				я підвал
+			</footer>
+		</div>
+	</body>
+</html>

@@ -1,0 +1,382 @@
+@import url("reset.css");
+@import url("common.css");
+
+body {
+	font-family: Arial, "Helvetica Neue", Helvetica, sans-serif;
+	background-color: #333;
+	color: #fff;
+}
+.wrapper {
+	overflow: clip;
+	min-height: 100%;
+
+	display: flex;
+	flex-direction: column;
+}
+.wrapper > main {
+	flex-grow: 1;
+}
+
+.page {
+}
+.page__section:not(:last-child) {
+	margin-bottom: 40px;
+}
+
+/*
+Flexbox - це цілий модуль,
+що містить у собі набір властивостей 
+та їх значень як для 
+батька flex-контейнера, так і для 
+його дочірніх елементів flex-елементів. 
+Основною перевагою гнучкої FLEX розмітки 
+є можливість змінювати ширину/висоту простір 
+навколо та порядок flex-елементів, для того, 
+щоб найкращим чином заповнити доступний простір 
+flex-контейнера.
+*/
+
+/* FLEX-контейнер */
+.block {
+	border: 5px solid #ac260c;
+	background-color: #794f45;
+	/* Властивості FLEX-контейнера */
+	/* 
+	display: flex/inline-flex;
+	Визначає flex-контейнер,
+	блоковий або малий залежить від переданого значення. 
+	Перетворює всі свої прямі,
+	дочірні елементи у flex-елементи.
+	*/
+	display: flex;
+
+	/*
+	Визначає, чи зможуть flex-елементи переміщатися 
+	на наступні рядки, коли перестають поміщатися 
+	всередині flex-контейнера.
+
+	nowrap - (за замовченням) Flex-елементи не можуть 
+	переміщатися на наступні рядки flex-контейнера.
+	wrap - Flex-елементи зможуть переміщатися на 
+	наступні рядки flex-контейнера.
+	wrap-reverse - Flex-елементи зможуть переміщатися 
+	на наступні рядки flex-контейнера, але у зворотному порядку.
+	*/
+	flex-wrap: wrap;
+
+	/*
+	justify-content
+	Визначає вирівнювання вздовж основної осі 
+	(напрямок залежить від значення властивості flex-direction).
+	flex-start - Значення за промовчанням (не потрібно вказувати). 
+	Flex-елементи притискаються до початку осі.
+	flex-end - Flex-елементи притискаються вкінець осі.
+	center - Flex-елементи розташовуються в центрі основної осі.
+
+	space-between - Flex-елементи розміщуються 
+	поступово по основній осі. 
+	Перший елемент знаходиться на початку осі,
+	останній елемент знаходиться наприкінці осі.
+	Між елементами постійно однаковий простір
+
+	space-around - Flex-елементи розташовуються рівномірно 
+	по основній осі. До кожного flex-елементу 
+	додається простір ліворуч і праворуч.
+
+	space-evenly - Flex-елементи розташовуються рівномірно по 
+	основній осі з однаковим простором навколо них.
+	*/
+	/* justify-content: flex-start; */
+
+	/*
+	align-items
+	Визначає вирівнювання вздовж поперечної осі 
+	(напрямок залежить від значення властивості flex-direction).
+	stretch - Значення за промовчанням (не потрібно вказувати). 
+	Flex-елементи розтягуються весь розмір поперечної осі 
+	flex-контейнера.
+	flex-start - Flex-елементи притискаються до 
+	початку поперечної осі.
+	flex-end - Flex-елементи притискаються вкінець поперечної осі.
+	center - Flex-елементи по центру
+
+	*/
+	/* align-items: stretch; */
+
+	/*
+	flex-direction
+	Встановлює основну вісь,
+	таким чином визначає напрямок flex-елементів,
+	розташованих у flex-контейнері.
+	row - Значення за замовчуванням (не потрібно вказувати). 
+	Основна вісь горизонтальна. Всі flex-елементи 
+	розташуються ліворуч по горизонталі.
+	row-reverse - змінює напрям горизонтального вектору
+	column - змінює головну вісь на вертикальну (зверху вниз)
+	другорядна зліва на право.
+	column-reverse - змінює головну вісь на вертикальну (знизу вверх)
+	другорядна зліва на право.
+
+	*/
+	/* flex-direction: row; */
+	/* 
+	gap
+	Проміжок між FLEX-елементами
+	Не залежить від flex-direction
+
+	*/
+	/* Загальний (колонками та рядками) */
+	/* !!! Погано працює з відсотковим basis */
+	/* gap: 20px; */
+
+	/* Між колонками */
+	/* column-gap: 15px; */
+	/* Між рядками */
+	/* row-gap: 30px; */
+}
+
+/* 
+Властивості FLEX – елементів. 
+Застосовуються для flex-елемента,
+дочірнього об'єкта flex-контейнера
+*/
+
+/*
+	align-self
+	Перевизначає для конкретного flex-елемента 
+	вирівнювання вздовж поперечної осі 
+	(напрямок залежить від значення якості flex-direction).
+*/
+/* align-self: flex-start; */
+
+/*
+flex-grow - 0 заборонено. 1 дозволено. (за замовченням - 0) 
+Визначає можливість елемента збільшуватись 
+у розмірі, 	при необхідності заповнюючи весь 
+flex-контейнер. 
+
+flex-shrink - 0 заборонено. 1 дозволено. (за замовченням - 1)
+Визначає можливість елемента зменшуватись 
+у розмірі, при необхідності заповнюючи весь flex-контейєр. 
+
+flex-basis - Визначає базовий розмір елемента 
+за замовченням, до розподілу простору, що залишився. 
+Значення можуть бути у відсотках пікселях тощо.
+auto (за замовченням) - розмір по контенту
+*/
+
+/*
+flex-grow:1;
+flex-shrink:0;
+flex-basis: 200px;
+*/
+
+/* Універсальний запис */
+/* flex: 1 0 200px; */
+
+/*
+order
+Керує порядком,
+в якому розташовуються flex-елементи 
+всередині flex-контейнера.
+*/
+
+/* FLEX-елементи */
+.block__item {
+	color: #fff;
+	font-family: Arial, "Helvetica Neue", Helvetica, sans-serif;
+	font-size: 15px;
+	font-weight: 700;
+	background-color: #7a956b;
+	padding: 10px;
+	text-align: center;
+	border: 5px solid #77608d;
+}
+.block__item:nth-child(1) {
+	/* order: 2; */
+}
+.block__item:nth-child(2) {
+	/* order: 1; */
+	/* 
+	За замовченням
+	flex-grow: 0;
+	flex-shrink: 1;
+	flex-basis: auto;
+	*/
+	/* grow shrink basis */
+	/* flex: 0 1 auto; */
+}
+.block__item:nth-child(3) {
+	/* order: 3; */
+}
+.block__item:nth-child(4) {
+	/* order: 4; */
+}
+
+.block__item span {
+}
+
+/* Фішка */
+/* FLEX-контейнер */
+.row {
+	display: flex;
+	/* background-color: #794f45; */
+	flex-wrap: wrap;
+	row-gap: 20px;
+	margin: 0 -7.5px;
+}
+/* FLEX-елемент */
+.column {
+	/* background-color: #77608d; */
+	flex: 0 1 25%;
+	padding: 0px 7.5px;
+}
+/* Контент */
+.item {
+	color: #fff;
+	padding: 10px;
+	font-family: Arial, "Helvetica Neue", Helvetica, sans-serif;
+	background-color: #7a956b;
+}
+
+/* приклад з текстом */
+.text-block {
+	color: #fff;
+	font-family: Arial, "Helvetica Neue", Helvetica, sans-serif;
+
+	display: flex;
+	flex-direction: column;
+	align-items: flex-start;
+	row-gap: 20px;
+}
+.text-block__title {
+	font-size: 24px;
+}
+.text-block__text {
+}
+.text-block__link {
+	color: yellow;
+}
+
+/* Приклад з картками */
+.cards {
+	display: flex;
+	margin: 0px -15px;
+}
+.cards__column {
+	flex: 0 0 33.333%;
+	padding: 0px 15px;
+}
+.cards__item {
+}
+
+.item-card {
+	background-color: #666;
+	padding: 15px;
+	box-shadow: 0 0 25px rgba(0, 0, 0, 0.5);
+
+	display: flex;
+	flex-direction: column;
+	align-items: flex-start;
+	row-gap: 15px;
+
+	min-height: 100%;
+}
+.item-card__image {
+}
+.item-card__image img {
+	max-width: 100%;
+}
+.item-card__text {
+	color: #fff;
+	flex-grow: 1;
+}
+.item-card__button {
+	background-color: yellow;
+	padding: 5px;
+	color: #000;
+}
+
+/* 
+Приклад з width
+Приклад з текстом та псевдоелементом */
+.link {
+	font-family: Arial, "Helvetica Neue", Helvetica, sans-serif;
+	color: yellowgreen;
+
+	display: inline-flex;
+	align-items: center;
+	column-gap: 10px;
+}
+.link::before {
+	content: "";
+	flex: 0 0 20px;
+	height: 20px;
+	background-color: #000;
+	border-radius: 50%;
+	/* Рішення */
+	width: 20px;
+}
+
+/* 
+Приклад з width №2
+Приклад з текстом та зображенням */
+
+.object {
+	display: flex;
+	align-items: flex-start;
+	gap: 20px;
+}
+.object__icon {
+	width: 80px;
+	height: 80px;
+	background-color: #000;
+
+	/* Обов'язково */
+	flex-shrink: 0;
+
+	/* Або flex: 0 0 80px; без width */
+}
+.object__title {
+	color: #fff;
+}
+
+/* Приклад з float 
+Обтікання
+float: left / right;
+*/
+.text {
+	clear: both;
+}
+.text__image {
+	float: left;
+	margin: 0px 20px 20px 0px;
+}
+
+/* Зображення + тайтл + текст */
+.some-block {
+	display: flex;
+	align-items: flex-start;
+	gap: 20px;
+}
+.some-block__image {
+	flex: 0 0 150px;
+}
+.some-block__image img {
+	max-width: 100%;
+}
+.some-block__body {
+	flex-grow: 1;
+	display: flex;
+	flex-direction: column;
+	align-items: flex-start;
+	gap: 10px;
+}
+.some-block__title {
+	font-size: 20px;
+}
+.some-block__text {
+}
+.some-block__link {
+	color: yellow;
+}
