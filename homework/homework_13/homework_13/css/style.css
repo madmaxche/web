@@ -54,9 +54,22 @@ body{
 	position: absolute;
 	top: 100%;
 	left: 120px;
-	animation: moves 5s infinite ease ;
+	animation: moves 3s infinite ease-in 3s ;
 }
-
+.yellow{
+	background: #c0cd05;
+	position: absolute;
+	top: -120px;
+	left: 15px;
+	animation: yellows 3s linear infinite normal running 3s ;
+}
+.green{
+	background: #0f0;
+	position: absolute;
+	top: 100%;
+	left: 120px;
+	animation: greens 3s linear infinite normal running 3s ;
+}
 @keyframes move {
 	0%{
 		transform: translate(0px,-120px);
@@ -70,11 +83,27 @@ body{
 	0%{
 		transform: translate(0px,0px);
 	}
-	50%{
+	100%{
+		transform: translate(0px,-100vh);
+	}
+}
+@keyframes yellows {
+	0%{
+		transform: translate(-100px,-120px);
+	}
+	100%{
+		transform: translate(0px,100vh);
+	}
+}
+@keyframes greens {
+	0%{
+		transform: translate(0px,0px);
+	}
+	70%{
 		transform: translate(100px,0px);
 	}
 	100%{
-		transform: translate(0px,-1000px);
+		transform: translate(150px,-1000px);
 	}
 }
 /* -------------------------------------------------------------------------------- */
