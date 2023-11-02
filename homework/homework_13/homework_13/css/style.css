@@ -47,22 +47,19 @@ body{
 	top: 0px;
 	left: 15px;
 	transition: all 0.3s ease 0s;
-	animation: move 5s infinite linear  ;
+	animation: move 5s infinite ease-in-out  ;
 }
 .black{
 	background: #000000;
 	position: absolute;
 	top: 100%;
 	left: 120px;
-	animation: moves 5s infinite ease-out ;
+	animation: moves 5s infinite ease ;
 }
 
 @keyframes move {
 	0%{
 		transform: translate(0px,-120px);
-	}
-	50%{
-		transform: translate(0px,0px);
 	}
 	100%{
 		transform: translate(0px,100vh);
