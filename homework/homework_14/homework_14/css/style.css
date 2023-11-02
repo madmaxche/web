@@ -1,0 +1,84 @@
+/* ----------------- */
+/* --RESET STYLES--- */
+/* ----------------- */
+@import url("reset.css");
+@import url("common.css");
+
+/* -------------------------------------------------------------------------------- */
+.wrapper {
+	overflow: clip;
+	min-height: 100%;
+
+	display: flex;
+	flex-direction: column;
+}
+.wrapper > main {
+	flex-grow: 1;
+}
+[class*="__container"] {
+	max-width: 1270px;
+	margin: 0px auto;
+	padding: 0px 15px;
+}
+
+/* -------------------------------------------------------------------------------- */
+img{
+	max-width: 100%;
+}
+/* -------------------------------------------------------------------------------- */
+
+.mainblock {
+}
+.mainblock__container {
+}
+.mainblock__row {
+	display: flex;
+	justify-content: space-between;
+	align-items: center;
+}
+.mainblock__title {
+}
+.mainblock__actions {
+}
+.mainblock__column {
+}
+.mainblock__cards {
+}
+.cards {
+	display: flex;
+}
+.cards__column {
+	position: relative;
+	display: flex;
+	flex-direction: column;
+	row-gap: 30px;
+}
+.cards__item {
+}
+.cards__image {
+}
+.cards__tag {
+	position: absolute;
+	top: 30px;
+	left: 85%;
+}
+.cards__text {
+}
+.cards__date {
+}
+.cards__title {
+}
+.cards__description {
+}
+.cards__author {
+}
+.mainblock__button {
+}
+.mainblock__link {
+}
+
+/* -------------------------------------------------------------------------------- */
+
+
+
+/* -------------------------------------------------------------------------------- */
