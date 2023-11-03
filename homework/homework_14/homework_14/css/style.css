@@ -34,7 +34,9 @@ img{
 	max-width: 100%;
 }
 /* -------------------------------------------------------------------------------- */
-
+main{
+	padding: 100px 0px;
+}
 .mainblock__row {
 }
 .row {
@@ -51,26 +53,24 @@ img{
 }
 .row__column {
 }
-.mainblock__cards {
+.cards {
 	display: flex;
 	flex-wrap: wrap;
 	column-gap: 30px;
 	row-gap: 45px;
 }
-.mainblock__card {
+.cards__card {
 	margin-bottom: 60px;
-}
-.card {
 	display: flex;
 	flex-direction: column;
 	flex: 0 1 393px;
 	row-gap: 15px;
 }
-.card__image {
+.cards__image {
 	position: relative;
 	margin-bottom: 30px;
 }
-.card__tag {
+.cards__tag {
 	position: absolute;
 	top: 33px;
 	left: 300px;
@@ -86,24 +86,24 @@ img{
 	background: rgba(33, 37, 41, 0.3);
 	padding: 3px 13px;
 }
-.card__date {
+.cards__date {
 }
-.card__title {
+.cards__title {
 	color: #212529;
 	font-size: 25px;
 	font-weight: 700;
 	line-height: 1.6; /* 160% */
 }
-.card__description {
+.cards__description {
 }
-.card__description::after{
+.cards__description::after{
 	content: "";
 	display: inline-block;
 	width: 390px;
 	height: 1px;
 	background: #E5E5E5;
 }
-.card__author {
+.cards__author {
 }
 
 .mainblock__button {
