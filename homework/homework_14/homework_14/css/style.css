@@ -32,6 +32,7 @@ body{
 }
 img{
 	max-width: 100%;
+	transition: all 0.3s ease 0s;
 }
 /* -------------------------------------------------------------------------------- */
 main{
@@ -44,20 +45,30 @@ main{
 	justify-content: space-between;
 	flex-wrap: wrap;
 	margin-bottom: 44px;
+	font-size: 12px;
+	font-weight: 500;
+	line-height: 2.08; /* 208.333% */
 }
 .row__title {
+	color: #495057;
 }
 .row__text {
 	display: flex;
 	column-gap: 20px;
+	color: rgba(73, 80, 87, 0.50);
 }
-.row__column {
+.row__column{
+	transition: all 0.3s ease 0s;
+}
+.row__column:hover{
+	color: rgba(73, 80, 87, 1);
 }
 .cards {
 	display: flex;
 	flex-wrap: wrap;
 	column-gap: 30px;
 	row-gap: 45px;
+	justify-content: center;
 }
 .cards__card {
 	margin-bottom: 60px;
@@ -65,10 +76,16 @@ main{
 	flex-direction: column;
 	flex: 0 1 393px;
 	row-gap: 15px;
+	transition: all 0.3s ease 0s;
 }
 .cards__image {
 	position: relative;
 	margin-bottom: 30px;
+	transition: all 0.3s ease 0s;
+	overflow: hidden;
+}
+.cards__image img:hover{
+	transform: scale(1.2);
 }
 .cards__tag {
 	position: absolute;
