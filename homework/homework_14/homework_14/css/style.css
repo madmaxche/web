@@ -4,6 +4,8 @@
 @import url("reset.css");
 @import url("common.css");
 
+@import url("https://fonts.googleapis.com/css?family=Poppins:300,500,700&display=swap");
+
 /* -------------------------------------------------------------------------------- */
 .wrapper {
 	overflow: clip;
@@ -22,59 +24,103 @@
 }
 
 /* -------------------------------------------------------------------------------- */
+body{
+	font-family: "Poppins", sans-serif;
+	font-weight: 300;
+	font-size: 16px;
+	line-height: 1.5;
+}
 img{
 	max-width: 100%;
 }
 /* -------------------------------------------------------------------------------- */
 
-.mainblock {
-}
-.mainblock__container {
-}
 .mainblock__row {
+}
+.row {
 	display: flex;
 	justify-content: space-between;
-	align-items: center;
+	flex-wrap: wrap;
+	margin-bottom: 44px;
 }
-.mainblock__title {
+.row__title {
 }
-.mainblock__actions {
+.row__text {
+	display: flex;
+	column-gap: 20px;
 }
-.mainblock__column {
+.row__column {
 }
 .mainblock__cards {
-}
-.cards {
 	display: flex;
+	flex-wrap: wrap;
+	column-gap: 30px;
+	row-gap: 45px;
 }
-.cards__column {
-	position: relative;
+.mainblock__card {
+	margin-bottom: 60px;
+}
+.card {
 	display: flex;
 	flex-direction: column;
-	row-gap: 30px;
+	flex: 0 1 393px;
+	row-gap: 15px;
 }
-.cards__item {
+.card__image {
+	position: relative;
+	margin-bottom: 30px;
 }
-.cards__image {
-}
-.cards__tag {
+.card__tag {
 	position: absolute;
-	top: 30px;
-	left: 85%;
+	top: 33px;
+	left: 300px;
+	min-width: 63.862px;
+	text-transform: uppercase;
+	height: 25px;
+	flex-shrink: 0;
+	color: #F8F9FA;
+	text-align: center;
+	font-size: 8px;
+	font-weight: 700;
+	line-height: 2.5; /* 250% */
+	background: rgba(33, 37, 41, 0.3);
+	padding: 3px 13px;
 }
-.cards__text {
+.card__date {
 }
-.cards__date {
+.card__title {
+	color: #212529;
+	font-size: 25px;
+	font-weight: 700;
+	line-height: 1.6; /* 160% */
 }
-.cards__title {
+.card__description {
 }
-.cards__description {
+.card__description::after{
+	content: "";
+	display: inline-block;
+	width: 390px;
+	height: 1px;
+	background: #E5E5E5;
 }
-.cards__author {
+.card__author {
 }
+
 .mainblock__button {
+	text-align: center;
 }
 .mainblock__link {
+	min-width: 178px;
+	height: 40px;
+	flex-shrink: 0;
+	padding: 8px 50px;
+	color: #F8F9FA;
+	text-align: center;
+	font-size: 12px;
+	font-weight: 500;
+	line-height: 25px; /* 208.333% */
+	border-radius: 3px;
+	background: #212529;
 }
 
 /* -------------------------------------------------------------------------------- */
