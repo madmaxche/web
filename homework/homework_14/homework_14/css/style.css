@@ -38,6 +38,10 @@ img{
 
 .cards {
 	display: flex;
+	flex-wrap: wrap;
+	column-gap: 30px;
+	row-gap: 45px;
+	justify-content: center;
 	color: #495057;
 	font-size: 12px;
 	font-weight: 300;
@@ -46,7 +50,7 @@ img{
 .cards__item {
 	display: flex;
 	flex-direction: column;
-	flex: 0 0 393px;
+	flex: 0 1 393px;
 	row-gap: 30px;
 }
 .cards__image {
@@ -75,6 +79,7 @@ img{
 	height: 25px;
 	flex-shrink: 0;
 	padding: 3px 13px;
+	z-index: 30;
 }
 .cards__title {
 	color: #212529;
@@ -88,6 +93,28 @@ img{
 }
 .cards__item:hover img{
 	transform: scale(1.2);
+}
+.cards__item:hover .cards__image::before{
+	opacity: 1;
+}
+.cards__image::before{
+	content: "";
+	position: absolute;
+	opacity: 0;
+	top: 0;
+	left: 0;
+	width: 100%;
+	height: 100%;
+	z-index: 20;
+	background: rgba(33, 37, 41, 0.30);
+	transition: all 0.3s ease 0s;
+}
+.cards__description{
+	color: #495057;
+	font-size: 12px;
+	font-weight: 300;
+	line-height: 1.66; /* 166.667% */
+	
 }
 .cards__description::after{
 	content: "";
