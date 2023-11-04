@@ -89,6 +89,7 @@ img{
 	display: flex;
 	flex-direction: column;
 	row-gap: 15px;
+	align-content: end;
 }
 .cards__tag {
 	transition: all 0.3s ease 0s;
@@ -107,6 +108,8 @@ img{
 	flex-shrink: 0;
 	padding: 3px 13px;
 	z-index: 30;
+}
+.cards__author{
 }
 .cards__title {
 	color: #212529;
