@@ -84,6 +84,10 @@ img{
 	border-radius: 3px;
 	transition: all 0.3s ease 0s;
 	overflow: hidden;
+	max-height: 250px;
+	display: flex;
+	justify-content: center;
+	align-items: center;
 }
 .cards__text {
 	display: flex;
