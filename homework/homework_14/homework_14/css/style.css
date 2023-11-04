@@ -29,14 +29,15 @@ body{
 	font-weight: 300;
 	font-size: 16px;
 	line-height: 1.66; /* 166.667% */
-	padding: 100px 0px;
 }
 img{
 	max-width: 100%;
 	transition: all 0.3s ease 0s;
 }
 /* -------------------------------------------------------------------------------- */
-
+.mainblock{
+	padding: 100px 0px;
+}
 .row {
 	display: flex;
 	justify-content: space-between;
@@ -195,6 +196,107 @@ img{
 }
 /* -------------------------------------------------------------------------------- */
 
-
+.headerblock {
+	min-height: 100vh;
+	background: url('../img/header-back.jpg') 0 0 / cover no-repeat;
+}
+.headerblock__container {
+}
+.headerblock__row {
+}
+.row {
+	padding-top: 36px;
+	display: flex;
+	justify-content: space-between;
+}
+.row__logo {
+}
+.row__menu {
+	display: flex;
+	
+}
+.menu {
+	color: rgba(248, 249, 250, 0.50);
+	font-size: 12px;
+	font-weight: 500;
+	line-height: 2.08; /* 208.333% */
+	
+}
+.menu__list {
+	display: flex;
+	column-gap: 25px;
+}
+.menu__item{
+	transition: all 0.3s ease-in-out 0s;
+	position: relative;
+}
+.menu__item:hover{
+	color: #F8F9FA;
+}
+.menu__item::after{
+	content: "";
+	position: absolute;
+	top: 80%;
+	left: 0%;
+	text-align: center;
+	background: #CCD5AE;
+	border-radius: 2px;
+	width: 100%;
+	height: 2px;
+	opacity: 0;
+	visibility: hidden;
+	transition: all 0.3s ease-in-out 0s;
+}
+.menu__item:last-child{
+	margin-right: 25px;
+}
+.menu__item:hover::after{
+	opacity: 1;
+	visibility: visible;
+}
+.menu__item:hover .menu__link_parent::after{
+	transform: rotate(-90deg) translate(2px, 10px);
+}
+.menu__link {
+}
+.sub-menu {
+}
+.menu__link_parent {
+	position: relative;
+}
+.menu__link_parent::after{
+	content: "";
+	display: inline-block;
+	background: url('../img/arrow-down.svg') 0 0 no-repeat;
+	width: 8px;
+	height: 5px;
+	transform: translate(5px, -1px);
+	transition: all 0.3s ease 0s;
+}
+.sub-menu__menu {
+}
+.sub-menu__list {
+	border-radius: 5px;
+	background: #212529;
+	width: 136px;
+	height: 170px;
+	flex-shrink: 0;
+	padding: 20px;
+	position: absolute;
+	top: 100%;
+	left: 0;
+}
+.sub-menu__item {
+}
+.sub-menu__item:not(:last-child){
+	margin-bottom: 10px;
+}
+.sub-menu__link {
+}
+.row__action {
+	padding-top: 6px;
+}
+.row__search {
+}
 
 /* -------------------------------------------------------------------------------- */
