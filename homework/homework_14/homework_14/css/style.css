@@ -264,6 +264,11 @@ img{
 .menu__link_parent {
 	position: relative;
 }
+.menu__item:hover .sub-menu__menu{
+	display: block;
+	visibility: visible;
+	opacity: 1;
+}
 .menu__link_parent::after{
 	content: "";
 	display: inline-block;
@@ -274,17 +279,21 @@ img{
 	transition: all 0.3s ease 0s;
 }
 .sub-menu__menu {
-}
-.sub-menu__list {
+	display: none;
+	visibility: hidden;
+	opacity: 0;
+	transition: all 0.3s ease 0s;
 	border-radius: 5px;
 	background: #212529;
 	width: 136px;
 	height: 170px;
 	flex-shrink: 0;
-	padding: 20px;
 	position: absolute;
 	top: 100%;
-	left: 0;
+	left: -30%;
+}
+.sub-menu__list {
+	padding: 20px;
 }
 .sub-menu__item {
 }
