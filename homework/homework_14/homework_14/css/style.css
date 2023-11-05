@@ -230,7 +230,7 @@ img{
 	transition: all 0.3s ease-in-out 0s;
 	position: relative;
 }
-.menu__item:hover{
+.menu__link:hover{
 	color: #F8F9FA;
 }
 .menu__item::after{
