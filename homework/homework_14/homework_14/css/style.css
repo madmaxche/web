@@ -198,17 +198,21 @@ img{
 
 .headerblock {
 	min-height: 100vh;
-	background: url('../img/header-back.jpg') 0 0 / cover no-repeat;
+	background: url('../img/header-back.jpg') center center / cover no-repeat;
+	z-index: 5;
 }
 .headerblock__container {
 }
 .headerblock__row {
+	padding-top: 36px;
+
 }
 .row {
-	padding-top: 36px;
 	display: flex;
 	justify-content: space-between;
+	z-index: 60;
 }
+
 .row__logo {
 }
 .row__menu {
@@ -224,6 +228,15 @@ img{
 .menu__list {
 	display: flex;
 	column-gap: 25px;
+	margin-right: 25px;
+}
+.menu__list::after{
+	content: "";
+	display:inline-block;
+	background: rgba(229, 229, 229, 0.50);
+	width: 2px;
+	height: 25px;
+	transition: all 0.3s ease-in-out 0s;
 }
 .menu__item{
 	transition: all 0.3s ease-in-out 0s;
@@ -278,19 +291,18 @@ img{
 	transition: all 0.3s ease 0s;
 }
 .sub-menu__menu {
-	text-align: center;
 	display: none;
 	visibility: hidden;
 	opacity: 0;
-	transition: all 0.3s ease 0s;
 	border-radius: 5px;
 	background: #212529;
 	width: 136px;
 	height: 170px;
 	flex-shrink: 0;
+	margin: 0px auto;
 	position: absolute;
 	top: 100%;
-	left: -50%;
+	left: -25px;
 }
 .sub-menu__list {
 	padding: 20px;
@@ -311,6 +323,7 @@ img{
 	margin-bottom: 10px;
 }
 .sub-menu__link {
+	transition: all 0.1s ease-in 0s;
 }
 .row__action {
 	padding-top: 6px;
