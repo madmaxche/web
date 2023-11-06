@@ -4,6 +4,8 @@
 @import url("reset.css");
 @import url("common.css");
 
+@import url("https://fonts.googleapis.com/css?family=Russo+One:regular&display=swap");
+
 /* -------------------------------------------------------------------------------- */
 .wrapper {
 	overflow: clip;
@@ -16,16 +18,67 @@
 	flex-grow: 1;
 }
 [class*="__container"] {
-	max-width: 0px;
+
 }
 
 /* -------------------------------------------------------------------------------- */
 img{
 	max-width: 100%;
 }
+body{
+	font-family: 'Russo One';
+}
 /* -------------------------------------------------------------------------------- */
 
+.headerblock {
+	background: #333087;
+}
+.headerblock__container {
+}
+.headerblock__wrapper {
+	background: url('../img/header__star.webp') 0 0 no-repeat;
+}
+.headerblock__row {
+	padding-top: 50px;
+	display: flex;
+	justify-content: space-around;
+	align-items: center;
+}
+.headerblock__logo {
+}
+.row__text {
+	color: #fff;
+	text-align: center;
+	line-height: 1.66;
+}
+.headerblock__title {
+	font-size: 30px;
+}
+.headerblock__subtitle {
+	font-size: 40px;
+}
+.headerblock__blanket {
+	display: flex;
+	position: relative;
+	padding: 0px 52px 0px 49px;
+}
+.headerblock__blanket img:nth-child(1){
+	max-width: 750px;
+	z-index: 5;
+}
+.headerblock__blanket img:nth-child(2){
+	max-width: 891px;
+	position: absolute;
+	top: -20%;
+	left: 591px;
 
+}
+.headerblock__description {
+}
+.headerblock__text {
+}
+.headerblock__icons {
+}
 
 /* -------------------------------------------------------------------------------- */
 
