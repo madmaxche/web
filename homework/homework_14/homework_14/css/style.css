@@ -389,6 +389,10 @@ img{
 	background: rgba(33, 37, 41, 0.30);
 	transition: all 0.3s ease 0s;
 }
+.cards-topics__image_nature{
+	flex: 0 0 200px;
+	max-height: 200px;
+}
 .cards-topics__text {
 	display: flex;
 	flex-direction: column;
@@ -406,7 +410,7 @@ img{
 	flex-direction: column;
 	justify-content: center;
 	align-items: center;
-	background: url('../img/topics-back.jpg') center center/ cover no-repeat;
+	background: url('../img/tanya-nature.jpg') center center/ cover no-repeat;
 	padding: 0px 10%;
 	position: relative;
 }
@@ -443,7 +447,10 @@ color: #CCD5AE;
 	margin-bottom: 100px;
 }
 .cards__item_world{
-	flex: 0 1 287px;
+	flex: 1 1 287px;
+}
+.cards__image_world{
+	max-height: 200px;
 }
 .mainblock__another {
 	padding-top: 100px;
@@ -527,6 +534,7 @@ color: #CCD5AE;
 	}
 	.topics__image {
 		min-height: 100vh;
+		margin-bottom: 50px;
 	}
 }
 @media (max-width: 400px){
