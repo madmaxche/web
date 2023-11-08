@@ -410,7 +410,7 @@ img{
 	flex-direction: column;
 	justify-content: center;
 	align-items: center;
-	background: url('../img/tanya-nature.jpg') center center/ cover no-repeat;
+	background: url('../img/topics-back.jpg') center center/ cover no-repeat;
 	padding: 0px 10%;
 	position: relative;
 }
