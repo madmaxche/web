@@ -133,11 +133,10 @@ body{
 	justify-content: center;
 	gap: 30px;
 	margin: 0px -15px 82px;
-	
 }
 .columns__column {
+	flex: 0 1 584px;
 	padding: 0px 15px;
-	flex: 0 1 47.09%;
 	display: flex;
 	flex-direction: column;
 	gap: 30px;
@@ -157,6 +156,7 @@ body{
 .columns__footer {
 	display: flex;
 	column-gap: 80px;
+	padding-top: 30px;
 }
 .columns__date {
 }
@@ -172,6 +172,8 @@ body{
 }
 .gallery__row {
 	display: flex;
+	flex-wrap: wrap;
+	justify-content: center;
 	gap: 30px;
 }
 .gallery__image {
