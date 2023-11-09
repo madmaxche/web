@@ -40,19 +40,20 @@ body{
 	row-gap: 40px;
 }
 .achievement__title {
+	display: flex;
+	align-items: center;
 	color:#000;
 	font-size: 16px;
 	font-weight: 500;
 	line-height: 1.5; /* 24px */
+	gap: 30px;
 }
-.achievement__title::after{
-	content: "";
+.achievement__title-block{
+	flex: 0 1 446px;
 	display: inline-block;
+	width: 100%;
 	background: #000;
-	width: 464px;
 	height: 2px;
-	margin-bottom: 4px;
-	margin-left: 26px;
 }
 .achievement__cards {
 }
@@ -67,10 +68,32 @@ body{
 	justify-content: space-between;
 	gap: 40px;
 }
+.cards__image:hover::after{
+	opacity: 1;
+}
 .cards__image {
 	flex: 0 1 746px;
+	overflow: hidden;
+	position: relative;
 }
-.cards__pic {
+.cards__pic{
+	transition: transform 0.8s ease-in-out 0s;
+	position: relative;
+}
+.cards__image::after{
+	content: "";
+	display: block;
+	opacity: 0;
+	transition: opacity 0.8s ease-in-out 0s;
+	width: 100%;
+	height: 100%;
+	position: absolute;
+	top: 0;
+	left: 0;
+	background: rgba(0, 0, 0, 0.218);
+}
+.cards__image:hover .cards__pic{
+	transform: scale(1.1);
 }
 .cards__text {
 	display: flex;
@@ -122,14 +145,35 @@ body{
 }
 .minimalist__image {
 	margin-bottom: 100px;
+	overflow: hidden;
+	position: relative;
 }
 .minimalist__pic {
+	transition: transform 0.8s ease-in-out 0s;
+	position: relative;
+}
+.minimalist__image::after{
+	content: "";
+	display: block;
+	opacity: 0;
+	transition: opacity 0.8s ease-in-out 0s;
+	width: 100%;
+	height: 100%;
+	position: absolute;
+	top: 0;
+	left: 0;
+	background: rgba(0, 0, 0, 0.218);
+}
+.minimalist__image:hover .minimalist__pic{
+	transform: scale(1.1);
+}
+.minimalist__image:hover::after{
+	opacity: 1;
 }
 .minimalist__columns {
 }
 .columns {
 	display: flex;
-	flex-wrap: wrap;
 	justify-content: center;
 	gap: 30px;
 	margin: 0px -15px 82px;
@@ -172,13 +216,43 @@ body{
 }
 .gallery__row {
 	display: flex;
-	flex-wrap: wrap;
 	justify-content: center;
 	gap: 30px;
 }
 .gallery__image {
+	overflow: hidden;
+	position: relative;
 }
 .gallery__pic {
+	transition: transform 0.8s ease-in-out 0s;
+	position: relative;
 }
-
+.gallery__image::after{
+	content: "";
+	display: block;
+	opacity: 0;
+	transition: opacity 0.8s ease-in-out 0s;
+	width: 100%;
+	height: 100%;
+	position: absolute;
+	top: 0;
+	left: 0;
+	background: rgba(0, 0, 0, 0.218);
+}
+.gallery__image:hover .gallery__pic{
+	transform: scale(1.1);
+}
+.gallery__image:hover::after{
+	opacity: 1;
+}
 /* -------------------------------------------------------------------------------- */
+
+@media (max-width: 1149px){
+	.cards__body {
+		justify-content: center;
+	}
+	.cards__text {
+		flex: 0 1 746px;
+		justify-content: center;
+	}
+}
