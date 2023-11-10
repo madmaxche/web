@@ -63,32 +63,8 @@ body{
 	justify-content: space-between;
 	gap: 40px;
 }
-.cards__image:hover::after{
-	opacity: 1;
-}
 .cards__image {
 	flex: 0 1 746px;
-	overflow: hidden;
-	position: relative;
-}
-.cards__pic{
-	transition: transform 0.8s ease-in-out 0s;
-	position: relative;
-}
-.cards__image::after{
-	content: "";
-	display: block;
-	opacity: 0;
-	transition: opacity 0.8s ease-in-out 0s;
-	width: 100%;
-	height: 100%;
-	position: absolute;
-	top: 0;
-	left: 0;
-	background: rgba(0, 0, 0, 0.218);
-}
-.cards__image:hover .cards__pic{
-	transform: scale(1.1);
 }
 .cards__text {
 	display: flex;
@@ -138,30 +114,6 @@ body{
 }
 .minimalist__image {
 	margin-bottom: 100px;
-	overflow: hidden;
-	position: relative;
-}
-.minimalist__pic {
-	transition: transform 0.8s ease-in-out 0s;
-	position: relative;
-}
-.minimalist__image::after{
-	content: "";
-	display: block;
-	opacity: 0;
-	transition: opacity 0.8s ease-in-out 0s;
-	width: 100%;
-	height: 100%;
-	position: absolute;
-	top: 0;
-	left: 0;
-	background: rgba(0, 0, 0, 0.218);
-}
-.minimalist__image:hover .minimalist__pic{
-	transform: scale(1.1);
-}
-.minimalist__image:hover::after{
-	opacity: 1;
 }
 .columns {
 	display: flex;
@@ -201,32 +153,6 @@ body{
 	display: flex;
 	justify-content: center;
 	gap: 30px;
-}
-.gallery__image {
-	overflow: hidden;
-	position: relative;
-}
-.gallery__pic {
-	transition: transform 0.8s ease-in-out 0s;
-	position: relative;
-}
-.gallery__image::after{
-	content: "";
-	display: block;
-	opacity: 0;
-	transition: opacity 0.8s ease-in-out 0s;
-	width: 100%;
-	height: 100%;
-	position: absolute;
-	top: 0;
-	left: 0;
-	background: rgba(0, 0, 0, 0.218);
-}
-.gallery__image:hover .gallery__pic{
-	transform: scale(1.1);
-}
-.gallery__image:hover::after{
-	opacity: 1;
 }
 /* -------------------------------------------------------------------------------- */
 
