@@ -28,6 +28,7 @@ img{
 }
 body{
 	font-family: 'Poppins', sans-serif;
+	background: #D9D9D9;
 }
 /* -------------------------------------------------------------------------------- */
 .achievement {
@@ -166,46 +167,34 @@ body{
 	}
 }
 
-
-.mainblock__portfolio {
-}
-.portfolio {
-}
-.portfolio__title {
-}
-.title {
-}
-.portfolio__subtitle {
-}
-.subtitle {
-}
 .portfolio__image {
 	margin-bottom: 100px;
 }
-.image {
-}
-.portfolio__pic {
-}
-.pic {
-}
 .title-section {
 	margin-bottom: 40px;
-}
-.portfolio__title-block {
-}
-.title-block {
 }
 .portfolio__cards {
 	display: flex;
 	flex-direction: column;
 	gap: 40px;
 }
-.portfolio__item {
-}
 .item {
 	display: flex;
 	column-gap: 40px;
 	align-items: center;
+	flex-wrap: wrap;
+}
+.item:nth-child(even){
+	flex-direction: row-reverse;
+}
+.item:nth-child(even) .tag{
+	flex-direction: row-reverse;
+	top: 26px;
+	left: -196px;
+}
+.item:nth-child(odd) .tag{
+	top: 26px;
+	right: -196px;
 }
 .item__image {
 	position: relative;
@@ -221,7 +210,6 @@ body{
 	height: 90px;
 	position: absolute;
 	top: 26px;
-	right: -200px;
 	padding: 17px 20px;
 	background: #fff;
 	z-index: 20;
@@ -273,4 +261,10 @@ body{
 	font-size: 14px;
 	font-weight: 500;
 	line-height: 1.5; /* 21px */
+	transition: all 0.3s ease 0s;
+}
+.item__link:hover{
+	background: #fff;
+	color:#2C3878;
+	border: 1px solid #2C3878;
 }
