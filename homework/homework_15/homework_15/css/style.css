@@ -180,9 +180,10 @@ body{
 }
 .item {
 	display: flex;
-	column-gap: 40px;
+	gap: 40px;
 	align-items: center;
 	flex-wrap: wrap;
+	justify-content: center;
 }
 .item:nth-child(even){
 	flex-direction: row-reverse;
@@ -213,6 +214,32 @@ body{
 	padding: 17px 20px;
 	background: #fff;
 	z-index: 20;
+}
+@media (max-width: 1174px){
+	.tag{
+		position: relative;
+		width: 100%;
+	}
+	.item:nth-child(even) .tag{
+		flex-direction: row-reverse;
+		top: 26px;
+		left: 0px;
+	}
+	.item:nth-child(odd) .tag{
+		top: 26px;
+		right: 0px;
+	}
+}
+@media (max-width: 566px){
+	.item:nth-child(even) .tag{
+		flex-direction: row-reverse;
+		bottom:-26px;
+		left: 0px;
+	}
+	.item:nth-child(odd) .tag{
+		bottom:-26px;
+		right: 0px;
+	}
 }
 .tag__icon {
 }
