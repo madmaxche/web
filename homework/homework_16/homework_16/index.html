@@ -17,7 +17,85 @@
 		</header>
 		<main class="mainblock">
 			<div class="mainblock__container">
-
+				<div class="mainblock__billing">
+					<h2 class="mainblock__title">Billing Details</h2>
+					<form action="https://jsonplaceholder.typicode.com/posts" method="post" class="mainblock__form form">
+						<div class="form__body">
+							<div class="form__column">
+								<div class="form__line">
+									<input required autocomplete="off" type="text" name="first-name" data-error="Помилка"
+										placeholder="First name*" class="form__input">
+								</div>
+								<div class="form__line">
+									<input required autocomplete="off" type="text" name="address" data-error="Помилка"
+										placeholder="Address*" class="form__input">
+								</div>
+								<div class="form__line">
+									<select name="Country" title="Country *" required class="form__selected">
+										<option value="1" selected>Пункт №1</option>
+										<option value="2">Пункт №2</option>
+										<option value="3">Пункт №3</option>
+										<option value="4">Пункт №4</option>
+									</select>
+								</div>
+								<div class="form__line">
+									<input autocomplete="on" type="number" name="postcode" data-error="Помилка"
+										placeholder="Postcode/ZIP" class="form__input">
+								</div>
+								<div class="form__line">
+									<input autocomplete="on" type="number" name="postcode" data-error="Помилка"
+										placeholder="Postcode/ZIP" class="form__input">
+								</div>
+							</div>
+							<div class="form__column">
+								<div class="form__line">
+									<input required autocomplete="off" type="text" name="last-name" data-error="Помилка"
+										placeholder="Last name*" class="form__input">
+								</div>
+								<div class="form__line">
+									<input autocomplete="off" type="adress" name="adress-line" data-error="Помилка"
+										placeholder="Address line 2" class="form__input">
+								</div>
+								<div class="form__line">
+									<input autocomplete="on" type="text" name="city-town" data-error="Помилка"
+										placeholder="City/Town *" class="form__input">
+								</div>
+								<div class="form__line">
+									<input required autocomplete="on" type="tel" name="phone-number" data-error="Помилка"
+										placeholder="Phone*" class="form__input">
+								</div>
+								<div class="form__line">
+									<input required autocomplete="on" type="tel" name="phone-number" data-error="Помилка"
+										placeholder="Phone*" class="form__input">
+								</div>
+							</div>
+						</div>
+						<div class="form__line_textarea">
+							<textarea name="additional-info" id="ad-info" placeholder="Additional information"
+								class="form__textarea"></textarea>
+						</div>
+						<div class="form__line_checkbox">
+							<div class="form__checkbox checkbox">
+								<input id="c_1" data-error="Помилка" class="checkbox__input" type="checkbox" value="Yes"
+									name="create-account">
+								<label for="c_1" class="checkbox__label"><span class="checkbox__text">Create
+										Account</span></label>
+							</div>
+							<div class="form__checkbox checkbox">
+								<input id="c_2" data-error="Помилка" class="checkbox__input" type="checkbox" value="yes"
+									name="ship-different">
+								<label for="c_2" class="checkbox__label"><span class="checkbox__text">Ship to a different
+										address?</span></label>
+							</div>
+						</div>
+						<h2 class="mainblock__title">Apply Coupon to get discount!</h2>
+						<div class="form__line">
+							<input required autocomplete="off" type="text" name="Coupon" data-error="Помилка"
+								placeholder="Coupon holder" class="form__input">
+							<input type="submit" value="Apply Coupon" class="form__button">
+						</div>
+					</form>
+				</div>
 			</div>
 		</main>
 		<footer class="footerblock">
