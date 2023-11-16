@@ -31,14 +31,11 @@ body{
 }
 /* -------------------------------------------------------------------------------- */
 
-.mainblock__form {
-
+.mainblock {
 }
-.form {
-	color: #637381;
-	font-size: 16px;
-	font-weight: 500;
-	line-height: 1.5; /* 150% */
+.mainblock__container {
+}
+.mainblock__billing {
 }
 .mainblock__title {
 	color: #212B36;
@@ -47,96 +44,51 @@ body{
 	line-height: 1.25; /* 125% */
 	margin-bottom: 30px;
 }
-.form__body {
-	display: flex;
-	column-gap: 28px;
-	margin-bottom: 30px;
+.mainblock__form {
 }
-.form__column {
+.form {
+}
+.form__group {
 	display: flex;
 	flex-direction: column;
 	row-gap: 30px;
+}
+.form__row {
+	display: flex;
+	justify-content: space-between;
+	column-gap: 28px;
+}
+.form__column {
 }
 .form__input {
 	min-width: 336px;
 	border-radius: 7px;
 	border: 1px solid #E7E7E7;
-	background: #FFF;
 	padding: 15px 25px;
+	background: #FFF;
 }
-.form__selected {
+.form__input:focus{
+	outline: 1px solid #3056D3;
+}
+.form__select:focus{
+	outline: 1px solid #3056D3;
+}
+.form__select{
+	min-width: 336px;
 	border-radius: 7px;
 	border: 1px solid #E7E7E7;
-	background: #FFF;
 	padding: 15px 25px;
-	width: 100%;
-	font-family: "Inter", sans-serif;
-	font-weight: 500;
-}
-.form__textarea{
-	border-radius: 7px;
-	border: 1px solid #E7E7E7;
 	background: #FFF;
-	padding: 15px 25px;
-	width: 100%;
-	min-height: 250px;
-	resize: none;
-}
-
-.form__line_textarea {
-	margin-bottom: 30px;
-}
-.form__line {
-}
-.form__checkbox {
-}
-.form__line_checkbox {
-	margin-bottom: 30px;
-}
-.checkbox {
-}
-.checkbox:not(:last-child){
-	margin-bottom: 30px;
-}
-.checkbox__input {
-	position: absolute;
-	top: 0;
-	left: 0;
-	width: 0;
-	height: 0;
-	opacity: 0;
-}
-.checkbox__input:checked + .checkbox__label::before{
-	background: url("../img/check-icon.svg") center no-repeat;
-}
-.checkbox__label::before{
-	content: "";
-	flex: 0 0 22px;
-	width: 22px;
-	height: 22px;
-	border-radius: 7px;
-	border: 1px solid #E7E7E7;
-	margin-right: 10px;
-	transition: background 0.1s ease-in-out 0s;
-}
-.checkbox__label {
-	cursor: pointer;
-	display: inline-flex;
-}
-.checkbox__text {
-}
-.form__button{
-	color: #FFF;
+	color: #637381;
 	font-size: 16px;
-	font-weight: 600;
+	font-weight: 500;
 	line-height: 1.5; /* 150% */
-	display: inline-flex;
-	padding: 12px 22px;
-	justify-content: center;
-	align-items: center;
-	gap: 10px;
-	border-radius: 5px;
-	background: #212B36;
+}
+.form__select option{
+	color: #637381;
+	font-size: 16px;
+	font-weight: 500;
+	line-height: 1.5; /* 150% */
 }
 /* -------------------------------------------------------------------------------- */
 
